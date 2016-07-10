@@ -1,0 +1,36 @@
+/***************
+ * search bars *
+ ***************/
+searchbar.primary-toolbar,
+searchbar.toolbar,
+searchbar {
+    padding: 7px;
+    background-color: #000;
+    color: @theme_fg_color;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+searchbar GtkSearchEntry,
+searchbar GtkSearchEntry:focus,
+searchbar.primary-toolbar GtkSearchEntry,
+searchbar.primary-toolbar GtkSearchEntry:focus {
+    border-radius: 0px;
+    border-color:transparent;
+}
+
+searchbar button.close-button {
+    padding: 4px;
+}
+
+searchbar.toolbar .button {
+    border: none;
+    background: none;
+    color: @theme_fg_color;
+}
+
+searchbar.toolbar .button:hover,
+searchbar.toolbar .button:active:hover,
+searchbar.toolbar .button:checked:checked {
+    background: none;
+    color: @selected_bg_color;
+}

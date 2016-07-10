@@ -1,0 +1,207 @@
+/*****************
+ * Progress bars *
+ *****************/
+GtkProgressBar {
+  -GtkProgressBar-min-horizontal-bar-height: 4;
+  -GtkProgressBar-min-vertical-bar-width: 4;
+  padding: 0;
+  font-size: 90%;
+  color: rgba(38, 50, 56, 0.5); }
+  GtkProgressBar.osd {
+    -GtkProgressBar-xspacing: 0;
+    -GtkProgressBar-yspacing: 0;
+    -GtkProgressBar-min-horizontal-bar-height: 4; }
+  GtkProgressBar.trough {
+    border-radius: 0;
+    background-color: rgba(29, 233, 182, 0.2); }
+    GtkProgressBar.trough:backdrop {
+      opacity: 0.8; }
+    GtkProgressBar.trough.osd {
+      border-style: none;
+      box-shadow: none;
+      background-color: rgba(29, 233, 182, 0.2); }
+
+progressbar {
+  color: #9E9D24;
+  font-size: smaller; }
+  progressbar.horizontal trough,
+  progressbar.horizontal progress {
+    min-height: 4px; }
+  progressbar.vertical trough,
+  progressbar.vertical progress {
+    min-width: 4px; }
+  progressbar trough {
+    background-color: #D1C4E9; }
+  progressbar progress {
+    background-color: #673AB7; }
+
+.progressbar {
+  border-radius: 0;
+  background-color: #1DE9B6; }
+  .progressbar.left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .progressbar.right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .progressbar.left.right {
+    box-shadow: none; }
+  .progressbar.vertical.top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  .progressbar.vertical.bottom {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none; }
+  .progressbar.osd {
+    background-image: none;
+    background-color: #1DE9B6;
+    border-style: none;
+    border-radius: 0; }
+
+.entry.progressbar {
+  border-style: none none solid;
+  border-width: 2px;
+  border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#1DE9B6), to(transparent)) 0 0 2/0 0 2px;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none; }
+
+GtkTreeView.view.progressbar, GtkTreeView.view.trough {
+  border-style: none none solid;
+  border-width: 4px;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none; }
+
+.trough row,
+.trough row:hover {
+    border: none;
+    border-radius: 3px;
+    background-image: none;
+    background-color: shade(@bg_color,0.9);
+    box-shadow: none;
+}
+
+.trough row:selected,
+.trough row:selected:hover,
+.trough row:selected:focus {
+    border: none;
+    border-radius: 3px;
+    background-color: @base_color;
+    background-image: none;
+    color: @text_color;
+}
+
+/*************
+ * Level Bar *
+ *************/
+.level-bar {
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+}
+
+.level-bar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar.trough,
+.level-bar.trough:backdrop {
+    border-width: 0px;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: shade(@bg_color,0.9);
+    color: black;
+    box-shadow: none;
+}
+
+.level-bar.fill-block,
+.level-bar.fill-block:backdrop {
+    border-width: 0px;
+    background-color: /*@selected_bg_color*/ #fff;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+.level-bar.fill-block.indicator-discrete.horizontal {
+    margin: 0 1px;
+}
+
+.level-bar.fill-block.indicator-discrete.vertical {
+    margin: 1px 0;
+}
+
+.level-bar.fill-block.level-high,
+.level-bar.fill-block.level-high:backdrop {
+    background-color: /*@cyan*/ #fff;
+}
+
+.level-bar.fill-block.level-low,
+.level-bar.fill-block.level-low:backdrop {
+    background-color: @warning_bg_color;
+}
+
+.level-bar.fill-block.empty-fill-block {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/************
+ * GtkScale *
+ ************/
+scale {
+  min-height: 12px;
+  min-width: 12px;
+  padding: 12px; }
+  scale * {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0; }
+  scale slider {
+    min-height: 24px;
+    min-width: 24px;
+    margin: -10px; }
+  scale trough {
+    outline-offset: 2px;
+    background-color: alpha(currentColor, 0.3); }
+    scale trough:disabled {
+      color: rgba(0, 0, 0, 0.32); }
+  scale highlight {
+    background-color: #CDDC39; }
+    scale highlight:disabled {
+      background-color: transparent; }
+  scale fill {
+    background-color: alpha(currentColor, 0.3); }
+    scale fill:disabled {
+      background-color: transparent; }
+  scale slider {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: calc(100% - 8px); }
+    scale slider {
+      background-color: alpha(#fff,0.9); }
+    scale slider:disabled {
+      background-color: shade(#fff,0.7); }
+    scale slider:hover {
+      background-size: calc(100% - 4px); }
+    scale slider:active {
+      background-size: calc(100% - 0px); }
+  scale.fine-tune slider {
+    background-size: calc(100% - 12px); }
+  scale value {
+    color: alpha(currentColor, 0.6); }
+  scale marks {
+    color: alpha(currentColor, 0.3); }
+    scale marks.top {
+      margin-bottom: 8px;
+      margin-top: -16px; }
+    scale marks.bottom {
+      margin-top: 8px;
+      margin-bottom: -16px; }
+    scale marks.top {
+      margin-right: 8px;
+      margin-left: -16px; }
+    scale marks.bottom {
+      margin-left: 8px;
+      margin-right: -16px; }

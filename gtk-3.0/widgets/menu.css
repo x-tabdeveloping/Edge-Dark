@@ -1,0 +1,188 @@
+/********
+ * menu *
+ ********/
+GtkTreeMenu.menu,
+GtkMenuToolButton.menu,
+GtkComboBox .menu {
+    background-color: rgba(51,56,67,1) /*@menu_bg_color*/;
+    color: @menu_fg_color;
+}
+
+primary-toolbar menu,
+primary-toolbar button menu,
+toolbar menu,
+toolbar primary-toolbar menu,
+headerbar menu,
+headerbar primary-toolbar menu,
+menu,
+.menu,
+headerbar.menu {
+    padding: 0;
+    border-radius: 0; /*0*/
+    border-style: none;
+   border-radius: 0px;
+   background-color: alpha(#fff,0.9);
+    color: #000;
+       box-shadow: 1.5px 1.5px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+menu.csd,
+menu .csd{
+   box-shadow: 1.5px 1.5px 0 0 rgba(0, 0, 0, 0.1);
+
+   background-color: /*alpha(#fff,0.8)*/ transparent;
+   color: #000;}
+
+
+menu button:hover,
+menu button:active,
+menu button:active *:insensitive,
+menu button:insensitive,
+menu button {
+    background-color: rgba(51,56,67,1);
+    background-image: none;
+       box-shadow: 1.5px 1.5px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.context-menu {
+    font: initial;
+}
+
+/***********
+ * menubar *
+ ***********/
+menubar {
+ background-color: shade(@bg_color,0.8);
+    color: #fff;
+   box-shadow: 1.5px 1.5px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/***************
+ * menubaritem *
+ **************/
+menubar menuitem,
+menubar menuitem {
+    padding: 3px 6px;
+    color: #fff;
+    border-width: 0px;
+}
+
+menubar menuitem:hover,
+menubar menuitem:hover {
+    border-width: 0px;
+    background-color: alpha(#fff,0.2);
+      transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+}
+
+menubar menuitem:checked{
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;}
+/************
+ * menuitem *
+ ************/
+GtkTreeMenu menuitem {
+    color: #000;
+    padding: 4px 3px;
+    border-width: 0;
+    background-color: @menu_bg_color;
+}
+
+menuitem,
+menu menuitem {
+    padding: 4px 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: none;
+    color: #000;
+
+    -GtkMenuItem-arrow-scaling: 0.5;
+}
+
+menu menuitem:active,{
+    /*transition: 100ms linear;*/
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    background-color: alpha(#000,0.2);
+
+    color: #000;
+    background-image: none;
+}
+
+menu menuitem:active,
+menu menuitem *:active,
+{
+    /*transition: 100ms linear;*/
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    background-color: alpha(#000,0.2);
+    color: #000;
+}
+menu menuitem:hover{
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+background-color: alpha(#000,0.2);}
+ menu menuitem *:hover{
+background-color: alpha(#000,0.2);}
+
+menumenuitem:insensitive,
+menu menuitem *:insensitive {
+    color: mix(@menu_fg_color, @menu_bg_color, 0.5);
+}
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+    border-style: none;
+    background-color: transparent;
+}
+
+.menuitem.arrow {
+    color: alpha(@menu_fg_color, 0.6);
+}
+
+.menuitem GtkCalendar:inconsistent {
+    color: mix(@menu_fg_color, @menu_bg_color, 0.5);
+}
+
+.menuitem GtkCalendar.button {
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.menuitem .entry {
+    border-color: shade(@menu_bg_color, 0.7);
+    background-color: @menu_bg_color;
+    background-image: none;
+    color: @menu_fg_color;
+}
+
+.menuitem .entry:active,
+.menuitem .entry:focus {
+    border-color: shade(@menu_bg_color, 0.7);
+}
+
+.menuitem .accelerator {
+    color: alpha(@menu_fg_color, 0.6);
+}
+
+.menuitem .accelerator:hover {
+    color: alpha(@theme_base_color, 0.8);
+}
+
+.menuitem .accelerator:insensitive {
+    color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
+}
+

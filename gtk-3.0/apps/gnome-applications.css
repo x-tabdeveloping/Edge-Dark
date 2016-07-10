@@ -1,0 +1,363 @@
+@define-color star #fff;/* star color */
+@define-color gnome-software @bg_color;
+
+/**********
+ * Header *
+ **********/
+
+#window_software .titlebar,
+#window_software .header-bar {
+    background-color: @gnome-software;
+}
+
+#window_software .titlebar:backdrop,
+#window_software .header-bar:backdrop {
+    background-color: @gnome-software;
+}
+
+
+/************
+ * nautilus *
+ ************/
+nautilus-canvas-item {
+    border-radius: 0px; /*3px*/
+}
+
+nautilus-desktop.nautilus-canvas-item {
+    color: white;
+    text-shadow: none;
+    background-color: @bg_color;
+}
+
+nautilus-desktop.nautilus-canvas-item:active,
+nautilus-desktop.nautilus-canvas-item:prelight,
+nautilus-desktop.nautilus-canvas-item:selected {
+    background-color: alpha(@selected_bg_color,1);
+    text-shadow: none;
+}
+
+/*NautilusWindow .titlebar .button:hover,
+NautilusWindow .titlebar .button:active:hover,
+NautilusWindow .titlebar .button:checked,
+NautilusWindow .titlebar .button:active {
+    color: #fff;
+    background-color: alpha(black,0.3);
+}*/
+
+.nautilus-desktop.nautilus-canvas-item {
+  color: @bg_color;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.nautilus-window {
+background-color: @bg_color;
+}
+
+.nautilus-desktop {
+  color: @bg_color;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+NautilusWindow background {
+background-color: @bg_color;
+}
+
+.nautilus-window,
+.nautilus-window notebook,
+.nautilus-window notebook > stack {
+  background: @bg_color; }
+
+.nautilus-window headerbar,
+.nautilus-window .titlebar{
+background-color: #000;
+color:#fff;}
+
+/*.nautilus-window entry{
+background-color: alpha(white,0.1);}
+
+.nautilus-window headerbar button,
+.nautilus-window .titlebar button{
+background-color: shade(#275292,0.8);
+box-shadow: none;}
+
+.nautilus-window headerbar button:hover,
+.nautilus-window .titlebar button:hover,
+.nautilus-window headerbar button:checked,
+.nautilus-window .titlebar button:checked{
+background-color:  @selected_bg_color;}
+
+.nautilus-window headerbar .titlebutton,
+.nautilus-window .titlebar .titlebutton{
+background-color: transparent;}*/
+
+NautilusWindow.background {
+background-color: @bg_color;
+}
+
+NautilusCanvasViewContainer {
+background-color: @base_color;
+}
+
+
+NautilusCanvasViewContainer .background {
+background-color: @base_color;
+}
+
+/******************
+ * gnome terminal *
+ ******************/
+VteTerminal {
+    background-color: alpha(@bg_color, 0.5);
+    color: @fg_color;
+}
+
+/*********
+ * gedit *
+ *********/
+.gedit-window headerbar {
+   background-color: rgba (112,126,147,1);
+   color: #fff;
+}
+
+GeditWindow separator {
+   color: shade (@bg_color,1.4);
+}
+
+
+GeditViewFrame .gedit-search-slider {
+    padding: 4px;
+    border-radius: 0 0 0 5px;
+    border: 0;
+    background-color: @bg_color;
+}
+
+GeditViewFrame .gedit-search-slider .linked .button {
+    border-color: alpha(black,0.2);
+}
+
+GeditViewFrame .gedit-search-slider .linked .button:hover {
+    border-color: transparent;
+    border-top-color: alpha(white,0.2);
+    border-bottom-color: alpha(black,0.2);
+}
+
+
+GeditViewFrame .gedit-search-slider .not-found {
+    background-color: @error_bg_color;
+    background-image: none;
+    color: @error_fg_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+GdTaggedEntry *{
+	color: @fg_color;
+}
+
+/**************
+ * Tweak Tool *
+ **************/
+/*
+.tweak-categories {
+    background-color: #275292;
+}
+
+.tweak-categories .sidebar,
+.tweak-categories .sidebar.view,
+.tweak-categories.sidebar .view,
+.tweak-categories .sidebar GtkScrolledWindow {
+    background-color: #275292;
+    color: @text-color; 
+}
+
+.tweak-categories .sidebar GtkScrolledWindow,
+.tweak-categories .sidebar {
+    border-width: 0;
+}
+
+.tweak-categories .sidebar .image:selected:focus,
+.tweak-categories .sidebar .image:selected:hover {
+    background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
+}
+
+.tweak-categories .sidebar  .list-row {
+    background-color: @base_color;
+    color: @text_color;
+}
+
+.tweak-categories .sidebar .cell:selected,
+.tweak-categories .sidebar .cell:selected:focus {
+    background-color: alpha(#000000,0.5);
+    background-image: none;
+    color: @selected_fg_color;
+}
+
+.tweak-categories .sidebar GtkScrolledWindow .list-row {
+    background-color: transparent;
+    color: @text_color;
+}
+
+.tweak-categories .sidebar .frame {
+    border-width: 0;
+}*/
+
+.tweak .background {
+   background-color: #275292;
+}
+
+/**************
+ * Gnome contacts *
+ **************/
+ContactsWindow .header-bar {
+   background-color: shade(@selected_bg_color,0.5);
+   color: #fff;
+}
+
+ContactsWindow.background {
+background-color: shade(@bg_color,0.8);
+color: #fff;
+}
+
+ContactsWindows .entry,
+ContactsWindows .primary-toolbar .entry  {
+background-color: shade(@selected_bg_color,0.7);
+}
+
+/**************
+ * Ephipany *
+ **************/
+
+EphyWindow .header-bar {
+   background-color: shade(@bg_color, 0.5);
+   color: #fff;
+}
+EphyWindow .entry,
+EphyWindow .primary-toolbar .entry {
+    transition: 200ms linear;
+    padding: 6px 8px;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 0px;
+    border-color: shade(@selected_bg_color,0.7);
+    background-color: shade(@selected_bg_color,0.7);
+    background-image: none;
+    color: @text_color;
+}
+
+EphyWindow .entry:active,
+EphyWindow .entry:focus {
+    transition: 200ms linear;
+    background-color: shade(@selected_bg_color,0.7);
+    border-bottom-color: shade(@selected_bg_color,0.7);
+    color: @text_color;
+}
+
+EphyWindow .entry:selected,
+EphyWindow .entry:selected:focus {
+    background-color: @selected_bg_color;
+}
+
+EphyWindow .entry:insensitive {
+    background-color: shade(@selected_bg_color,0.7);
+    background-image: shade(@selected_bg_color,0.7);
+}
+
+/**************
+ * Music *
+ **************/
+
+gnomemusic+window+Window .titlebar, 
+gnomemusic+window+Window .header-bar {
+    background-color: rgba (112,126,147,1);
+}
+
+gnomemusic+window+Window .titlebar:backdrop,
+gnomemusic+window+Window .header-bar:backdrop {
+    background-color: rgba (112,126,147,1);
+}
+
+XfceHeading {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: @bg_color;
+    background-image: none;
+    color: @text_color;
+}
+
+.xfce4-panel {
+    background-color: @bg_color;
+    color: @panel_fg_color;
+    font: normal;
+}
+
+.xfce4-panel .button {
+    padding: 0 2px;
+    border-radius: 0;
+    border-style: none;
+    color: @text_color;
+}
+
+.xfce4-panel .button:active {
+    background-color: #275292;
+    background-image: none;
+    color: @text_color;
+}
+
+.xfce4-panel .button:hover,
+.xfce4-panel .button:active:hover {
+    background-color: @selected_bg_color;
+    background-image: none;
+    color: @text_color;
+}
+
+.xfce4-panel .menu {
+    -gtk-image-effect: none;
+}
+
+/*Photos
+
+PhotosMainWindow .titlebar,
+PhotosMainWindow .header-bar {
+    background-color: rgba (30,30,30,1);
+}
+
+PhotosMainWindow .titlebar:backdrop,
+PhotosMainWindow .header-bar:backdrop {
+    background-color: rgba (30,30,30,1);
+}
+
+
+PhotosMainWindow .entry:active,
+PhotosMainWindow .entry:focus {
+    transition: 200ms linear;
+    background-color: #275292;
+    border-bottom-color: #275292;
+    color: @text_color;
+}
+
+PhotosMainWindow .entry:selected,
+PhotosMainWindow .entry:selected:focus {
+    background-color: @selected_bg_color;
+}
+
+PhotosMainWindow .entry:insensitive {
+    background-color: #275292;
+    background-image: none;
+}
+
+PhotosMainWindow .search-bar.primary-toolbar,
+PhotosMainWindow .search-bar.toolbar,
+PhotosMainWindow .search-bar {
+    padding: 7px;
+    background-color: #275292;
+    color: @theme_fg_color;
+    border:none;
+}
+
+PhotosMainWindow.background {
+    background-color: #000
+}
+*/

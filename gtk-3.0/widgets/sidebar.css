@@ -1,0 +1,151 @@
+/***********
+ * sidebar *
+ ***********/
+sidebar button {
+    border: none;
+    background-color: transparent;
+    color: @theme_fg_color;
+    box-shadow: none;
+	text-align: right;
+    border-radius: 0;
+    padding: 6px 8px;
+}
+
+sidebar {
+background-color: shade(rgb(32,143,143),0.5)/*rgba (46,53,66,1)*/;
+}
+
+placesidebar {
+padding: 10px;
+}
+
+placesidebar button {
+padding: 10px,
+}
+
+placesidebar,
+placesidebar list{
+background-color: alpha(black,0.5);}
+
+sidebar button:hover {
+    background-color: @selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+sidebar button {
+    padding: 6px 8px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: alpha(white,0);
+    border-bottom-color: alpha(black,0);
+    background-color: /*@base_color*/ alpha(white,0.06);
+    background-image: none;
+    color: @text_color;
+    font: bold;
+
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+}
+
+list:dir-ltr.tweak-categories {
+background-color:  shade(rgb(32,143,143),0.5);
+}
+
+sidebar,
+sidebar.view,
+sidebar view,
+sidebar GtkScrolledWindow {
+    background-color:  shade(rgb(32,143,143),0.5) /*@base-color*/;
+    color: @text-color; 
+    border-right: 1px solid shade(@bg_color,0.8);
+}
+
+sidebar GtkScrolledWindow,
+sidebar {
+    border-width: 0;
+}
+
+sidebar image:selected:focus,
+sidebar image:selected:hover {
+    background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
+}
+
+sidebar  list row {
+    background-color:  shade(rgb(32,143,143),0.5);
+    color: @text_color;
+    padding: 6px 8px;
+	text-align: right;
+}
+
+sidebar list:dir(ltr),
+sidebar list {
+    background-color:  shade(rgb(32,143,143),0.5);
+    border-right: 1px solid alpha(black,0.5);
+}
+
+sidebar list row:selected {
+   background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
+}
+
+sidebar list row:selected:hover {
+    background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
+}
+
+sidebar cell {
+      padding: 4px 10px;
+	text-align: right;
+}
+sidebar cell:selected,
+sidebar cell:hover,
+sidebar cell:selected:focus {
+    background-color:@selected_bg_color;
+    background-image: none;
+    color: @selected_fg_color;
+}
+
+sidebar separator,
+.source-list .separator {
+    color: @bg_color;
+}
+
+sidebar GtkScrolledWindow .list-row {
+    background-color: transparent;
+    color: @text_color;
+	text-align: right;
+}
+
+sidebar frame {
+    border-width: 0;
+}
+
+.source-list.badge {
+    background-image: none;
+    background-color:  shade(rgb(32,143,143),0.5);
+    color: #fff;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    border-width: 0;
+}
+
+sidebar,
+.source-list {
+    -GtkTreeView-horizontal-separator: 5px; /*1px*/
+    -GtkTreeView-vertical-separator: 6px;
+}
+
+sidebar label{
+background-color: transparent;}
+
+sidebar image{
+    color: #fff;
+    background-color: transparent;
+    padding: 4px 4px;
+}
+
+
+

@@ -1,0 +1,139 @@
+/*******************
+ * check and radio *
+ *******************/
+@keyframes check_check {
+  from {
+    -gtk-icon-transform: rotate(90deg); }
+  to {
+    -gtk-icon-transform: unset; } }
+@keyframes check_radio {
+  from {
+    -gtk-icon-transform: scale(0); }
+  to {
+    -gtk-icon-transform: unset; } }
+@keyframes check_indeterminate {
+  from {
+    -gtk-icon-transform: unset; }
+  50% {
+    -gtk-icon-transform: scale(0, 1); }
+  to {
+    -gtk-icon-transform: unset; } }
+
+check {
+  -gtk-icon-source: -gtk-icontheme("emblem-ok-symbolic"); 
+  icon-shadow: none;
+  color:#000;
+  border-radius: 8px;
+  margin: 4px;
+padding: 3px;
+  background-color: alpha(#fff,0.5);
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }
+  check:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:hover {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.7);  }
+  check:hover:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:active {
+  icon-shadow: none;
+  animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
+ }
+  check:active:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:insensitive {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.2); }
+  check:insensitive:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:inconsistent {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.3); }
+  check:inconsistent:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:inconsistent:hover {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.4); }
+  check:inconsistent:hover:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:inconsistent:active {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.5); }
+  check:inconsistent:active:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:inconsistent:insensitive {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.1); }
+  check:inconsistent:insensitive:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:checked {
+  icon-shadow: none;
+  animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
+ background-color: alpha(rgb(56,106,139),0.9);
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+  background-color: alpha(rgb(56,106,139),0.8);
+}
+  check:checked:backdrop {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+
+check:checked:hover {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.8); }
+  check:checked:hover:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:checked:active {
+  icon-shadow: none;
+  background-color: alpha(rgb(56,106,139),0.7);
+  animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  check:checked:active:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+check:checked:insensitive {
+  icon-shadow: none;
+  background-color: shade(rgb(56,106,139),0.7); }
+  check:checked:insensitive:backdrop {
+    opacity: 0.8;
+    transition: 0.2s; }
+
+radio {
+border-radius: 10px;
+padding: 0px;
+border: 2px solid alpha(#fff,0.08);
+margin: 4px;
+background-color: alpha(shade(#673AB7, 0.5),0.5);
+color: transparent;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }
+}
+radio:hover{
+ background-color:alpha(#673AB7, 0.7);
+}
+radio:active,
+radio:checked{
+background-color: #673AB7;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+}

@@ -1,0 +1,291 @@
+/************
+ * notebook *
+ ************/
+notebook.sidebar.view.separator,
+notebook.view.separator,
+notebook.separator,
+notebook.sidebar .view.separator {
+    color: shade (@bg_color,1.4);
+}
+
+notebook {
+    padding: 0;
+    background-color: rgba (46,53,66,1);
+    background-image: none;
+    background-clip: border-box;
+    -GtkNotebook-has-tab-gap: false;
+    border-bottom: none;
+border-top: none;
+    border-left: 1px solid alpha(black,0.5);
+border-right: 1px solid alpha(black,0.5);
+    
+}
+
+notebook tab {
+    padding: 0;
+    background-color: rgba (46,53,66,1);
+    background-image: none;
+    background-clip: border-box;
+    -GtkNotebook-has-tab-gap: false;
+    border-bottom: none;
+border-top: none;
+    border-left: 1px solid alpha(black,0.5);
+border-right: 1px solid alpha(black,0.5);
+    
+}
+
+notebook > header {
+    background-color: rgba (46,53,66,1);
+    background-image: none;
+    box-shadow: none;
+    border-width: 0;
+}
+
+notebook tab {
+    padding: 8px;
+    box-shadow: none;
+    border-left: 1px solid alpha(black,0.5);
+border-right: 1px solid alpha(black,0.5);
+    background-color: rgba (46,53,66,1) /*alpha(@theme_base_color,0.6)*/;
+    border-bottom: none;
+border-top: none;			
+    background-image: none;
+}
+
+notebook:active {
+    background-color: shade(@selected_bg_color,0.7) /*rgba (46,53,66,1)*/;
+    border-bottom: 2px solid @selected_bg_color;
+}
+
+notebook tab:active {
+    background-color: shade(@selected_bg_color,0.7) /*rgba (46,53,66,1)*/;
+    border-bottom: 2px solid @selected_bg_color;
+}
+
+/*notebook tab.top:active {
+    border-bottom: 0px;
+}
+
+notebook tab.left {
+    border-right: 1px solid @theme_bg_color;
+}
+
+notebook tab.left:active {
+    border-right: 0px;
+}
+
+notebook tab.bottom {
+    border-top: 1px solid @theme_bg_color;
+}
+
+notebook tab.bottom:active {
+    border-top: 0px;
+}
+
+notebook tab.right {
+    border-left: 1px solid @theme_bg_color;
+}
+
+notebook tab.right:active {
+    border-left: 0px;
+}*/
+
+notebook tab.left:first-child:active,
+notebook tab.right:first-child:active {
+    border-top: 0px;
+}
+
+notebook tab.left:last-child:active,
+notebook tab.right:last-child:active {
+    border-bottom: 0px;
+}
+
+notebook tab.top:first-child:active,
+notebook tab.bottom:first-child:active {
+    border-left: 0px;
+}
+
+notebook tab.top:last-child:active,
+notebook tab.bottom:last-child:active {
+    border-right: 0px;
+}
+
+/* close button styling */
+notebook tab .button {
+    transition: ease-in 150ms;
+    padding: 2px;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    color: @theme_text_color;
+}
+
+notebook tab .button:hover,
+notebook tab .button:active:hover {
+    color: @selected_bg_color;
+    background-color: transparent;
+}
+
+/*320*/
+
+notebook {
+  padding: 0; }
+  notebook.frame {
+    border: 1px solid alpha(#000,0.1);
+    border-radius: 0px; }
+  notebook > stack:not(:only-child) {
+    background-color: shade(@selected_bg_color, 0.5); }
+  notebook > header {
+    background-color: shade(@selected_bg_color, 0.6); }
+    notebook > header.top {
+      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 -1px rgba(185, 185, 185, 0.5);*/ }
+    notebook > header.bottom {
+      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 1px rgba(185, 185, 185, 0.5);*/ }
+    notebook > header.right {
+      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 1px 0 rgba(185, 185, 185, 0.5); }*/ }
+    notebook > header.left {
+      /*box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset -1px 0 rgba(185, 185, 185, 0.5);*/ none }
+    notebook > header.top, notebook > header.bottom {
+      padding: 0 2px; }
+    notebook > header.left, notebook > header.right {
+      padding: 7px 0; }
+    notebook > header > tabs > tab {
+      padding: 10px 20px;
+    border: 1px solid alpha(#000,0.1);
+      background-color: transparent;
+      outline-offset: -4px; }
+    notebook > header.top > tabs > tab.reorderable-page,
+    notebook > header.bottom > tabs > tab.reorderable-page {
+      padding-left: 12px;
+      padding-right: 12px; }
+    notebook > header.top > tabs > tab {
+      border-width: 0 1px 1px 1px;
+      border-radius: 0 0 2px 2px; }
+    notebook > header.bottom > tabs > tab {
+      border-width: 1px 1px 0 1px;
+      border-radius: 2px 2px 0 0; }
+    notebook > header.left > tabs > tab {
+      border-width: 1px 1px 1px 0;
+      border-radius: 0; }
+    notebook > header.right > tabs > tab {
+      border-width: 1px 0 1px 1px;
+      border-radius: 0; }
+notebook header tabs tab:active {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    animation: flat_ripple_effect 1s cubic-bezier(1, 1, 1, 1) forwards;}
+    notebook > header > tabs > tab:hover {
+      border-color: alpha(#000,0.1);
+      background-color: shade(@selected_bg_color, 0.95); }
+    notebook > header > tabs > tab:checked {
+      border-color: alpha(#000,0.1);
+background-color: shade(@selected_bg_color, 0.8); }
+      notebook > header > tabs > tab:checked:hover {
+        border-color: alpha(#000,0.1);
+background-color: shade(@selected_bg_color, 0.95); }
+    notebook > header.top > tabs > tab {
+      margin-right: -1px;
+      border-image: none /*linear-gradient(to bottom, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0)); */ }
+      notebook > header.top > tabs > tab:hover {
+        border-image: none;
+background-color: shade(@selected_bg_color, 0.95); }
+      notebook > header.top > tabs > tab:checked {
+        background-image: none /*linear-gradient(to bottom, #eaeaed, #e4e4e8)*/;
+        border-image: none;
+background-color: shade(@selected_bg_color, 0.8); }
+    notebook > header.bottom > tabs > tab {
+      margin-right: -1px;
+      border-image: none /*linear-gradient(to top, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0))*/; }
+      notebook > header.bottom > tabs > tab:hover {
+        border-image: none;
+background-color: shade(@selected_bg_color, 0.95); }
+      notebook > header.bottom > tabs > tab:checked {
+        background-image: none /*linear-gradient(to top, #e4e4e8, #eaeaed)*/;
+        border-image: none; 
+background-color: shade(@selected_bg_color, 0.8);}
+    notebook > header.left > tabs > tab {
+      margin-bottom: -1px;
+      border-image: /*linear-gradient(to right, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0));*/ none; }
+      notebook > header.left > tabs > tab:hover {
+        border-image: none;
+background-color: shade(@selected_bg_color, 0.95); }
+      notebook > header.left > tabs > tab:checked {
+        background-image: /*linear-gradient(to right, #e4e4e8, #eaeaed)*/ none;
+        border-image: none;
+background-color: shade(@selected_bg_color, 0.8); }
+    notebook > header.right > tabs > tab {
+      margin-bottom: -1px;
+      border-image: /*linear-gradient(to left, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0))*/ none; }
+      notebook > header.right > tabs > tab:hover {
+        border-image: none; }
+      notebook > header.right > tabs > tab:checked {
+        background-image: /*linear-gradient(to left, #e4e4e8, #eaeaed)*/ none;
+        border-image: none; }
+    notebook > header.top > tabs > tab, notebook > header.bottom > tabs > tab {
+      border-image-slice: 0 1 0 1; }
+    notebook > header.left > tabs > tab, notebook > header.right > tabs > tab {
+      border-image-slice: 1 0 1 0; }
+    notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+      notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > tabs > arrow.up:last-child {
+        margin-left: 7px; }
+    notebook > header.top > tabs > arrow.down, notebook > header.bottom > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+      notebook > header.top > tabs > arrow.down:first-child, notebook > header.bottom > tabs > arrow.down:first-child {
+        margin-right: 7px; }
+    notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+      notebook > header.left > tabs > arrow.up:last-child, notebook > header.right > tabs > arrow.up:last-child {
+        margin-top: 7px; }
+    notebook > header.left > tabs > arrow.down, notebook > header.right > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+      notebook > header.left > tabs > arrow.down:first-child, notebook > header.right > tabs > arrow.down:first-child {
+        margin-bottom: 7px; }
+    notebook > header > tabs > arrow {
+      color: #616163; }
+      notebook > header > tabs > arrow:hover {
+        color: #868688; }
+      notebook > header > tabs > arrow:active {
+        color: #3c3c3e; }
+      notebook > header > tabs > arrow:disabled {
+        color: rgba(171, 171, 173, 0.7); }
+  notebook > header > tabs > tab label {
+    padding: 0 2px;
+    color: #fff;
+    text-shadow: none; }
+  notebook > header > tabs > tab:hover label {
+    color: #fff; }
+  notebook > header > tabs > tab:checked label {
+    color: #fff; }
+  notebook > header > tabs > tab button.flat, notebook > header > tabs > tab button.sidebar-button {
+    min-height: 18px;
+    min-width: 18px;
+    padding: 0;
+    border: /*1px solid transparent*/ none;
+    border-radius: 2px;
+    transition-duration: 100ms;
+    color: #fff;
+    -gtk-icon-shadow: none; }
+    notebook > header > tabs > tab button.flat:last-child, notebook > header > tabs > tab button.sidebar-button:last-child {
+      margin-right: -5px;
+      margin-left: 5px;
+box-shadow: none; }
+    notebook > header > tabs > tab button.flat:first-child, notebook > header > tabs > tab button.sidebar-button:first-child {
+      margin-left: -5px;
+      margin-right: 5px; 
+box-shadow: none; }
+    notebook > header > tabs > tab button.flat:hover, notebook > header > tabs > tab button.sidebar-button:hover {
+      border: /*1px solid #b9b9b9*/ none;
+      color: shade(rgb(32,143,143),1.1);
+      background-image: none;
+      box-shadow: none; }
+    notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active {
+      border: /*1px solid #b9b9b9*/ none;
+      color: shade(rgb(32,143,143),1.1);
+      background-image: /*linear-gradient(to bottom, #d9d9e0, #e7e7ec)*/ none;
+      box-shadow: /*inset 0 1px rgba(0, 0, 0, 0.07), inset 0 2px 1px -2px rgba(0, 0, 0, 0.6)*/ none;
+      -gtk-icon-shadow: none; }
+  notebook > header > tabs > tab:hover button.flat:not(:hover):not(:active), notebook > header > tabs > tab:hover button.sidebar-button:not(:hover):not(:active),
+  notebook > header > tabs > tab:checked button.flat:not(:hover):not(:active),
+  notebook > header > tabs > tab:checked button.sidebar-button:not(:hover):not(:active) {
+    color: #fff; }

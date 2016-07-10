@@ -1,0 +1,73 @@
+/*********
+ * entry *
+ *********/
+entry,
+.primary-toolbar .entry {
+    /*transition: 200ms linear;*/
+    padding: 6px 8px;
+margin:1px;
+    background-color: /*alpha(shade(@selected_bg_color,1.7),0.3)*/ transparent;
+    background-image: none;
+    color: alpha(#fff,0.5);
+    border-radius: 0px;
+    box-shadow: inset 0 -1px alpha(#fff,0.5);
+  /*transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;*/
+}
+
+entry:active,
+entry:focus {
+    transition: 200ms linear;
+       /*background-color:alpha(shade(@selected_bg_color,1.7),0.4);*/
+    color: #fff;
+box-shadow: inset 0 -1px #009688;
+}
+
+entry image {
+background-color: transparent;
+}
+entry:selected,
+entry:selected:focus {
+    background-color: @selected_bg_color;
+}
+
+entry selection{
+    background-color: @selected_bg_color;
+}
+entry:insensitive {
+    background-color: shade(@selected_bg_color,0.7);
+    background-image: none;
+}
+
+entry.progressbar {
+    border-width: 0;
+    border-radius: 3px;
+    background-color: @selected_bg_color;
+    background-image: none;
+    color: #000;
+    border-color: @selected_bg_color;
+}
+
+entry icon,
+entry iconview{
+margin:2px;}
+
+.spinbutton entry {
+    /*transition: 200ms linear;*/
+    padding: 6px 8px;
+    background-color: /*alpha(shade(@selected_bg_color,1.7),0.3)*/ #fff;
+    background-image: none;
+    color: alpha(#000,0.5);
+    border-radius: 0px;
+    border: 2px solid alpha(black,0.5);
+  /*transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;*/
+}
+
+.spinbutton entry:active,
+.spinbutton entry:focus{
+    transition: 200ms linear;
+       /*background-color:alpha(shade(@selected_bg_color,1.7),0.4);*/
+    color: #000;
+    border: 2px solid /*alpha(#C51162,0.5)*/#BF0077;
+}

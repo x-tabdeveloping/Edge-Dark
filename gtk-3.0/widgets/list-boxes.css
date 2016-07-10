@@ -1,0 +1,80 @@
+/**************
+ * List boxes *
+ **************/
+list,
+list row {
+    font-weight: normal;
+    background-color: rgba(46,53,66,1);
+
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+treeview {
+background-color:alpha(white,0.5);
+color:#000;}
+
+list {
+  border-color: rgba(0, 0, 0, 0.09);
+  background-color: rgba(46,53,66,1); }
+
+list:dir-ltr.tweak-categories {
+background-color: rgba(46,53,66,1);
+}
+tweak-categories {
+background-color: rgba(46,53,66,1);
+}
+
+
+list row button {
+    padding: 5px;
+    background-color: rgba(46,53,66,1); 
+    color: @fg_color;
+    font-weight: normal;
+    border: none;
+    border-radius: 2px;
+}
+
+list row button:hover {
+    transition: none;
+    background-color: @selected_bg_color;
+    color: @fg_color;
+}
+
+    
+list row button:active, 
+list row button:active:hover {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+list row button:selected:hover {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+list row label,
+list row icon,
+list row image,
+list row box {
+background-color: transparent;
+}
+
+
+list row button:checked,
+list row button:selected, 
+list row:selected,    
+list row button:selected:active:hover {
+    background-color: @selected_bg_color/*shade(@selected_bg_color, 0.9);*/ 
+    color: @selected_fg_color;
+}
+
+  sidebar:dir(ltr), #polari-sidebar:dir(ltr), sidebar list:dir(ltr), #polari-sidebar list:dir(ltr) {
+    box-shadow: inset -2px 0 2px -2px rgba(0, 0, 0, 0.05), inset -3px 0 3px -2px rgba(0, 0, 0, 0.05); }
+
+/*selected-row buttons*/
+.list-row.button:selected .button:hover,
+.list-row.button:selected .button:active {
+    color: @selected_fg_color;
+}

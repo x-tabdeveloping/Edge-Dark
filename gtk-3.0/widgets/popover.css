@@ -1,0 +1,281 @@
+/************
+ * popovers *
+ ************/
+
+/*popover {
+    margin: 10px;
+    padding: 2px;
+    border-radius: 2px;
+    border: none /*1px solid shade(@bg_color, 0.85)*/;
+    /*background-clip: border-box;*/
+    /*background-color: alpha(black,0.5); /*rgba (46,53,66,1);*/
+    /*color: @fg_color;
+}
+
+GtkPopover {
+    margin: 10px;
+    padding: 2px;
+    border-radius: 2px;
+    border: none /*1px solid shade(@bg_color, 0.85)*/;
+    /*background-clip: border-box;*/
+    /*background-color: shade(@bg_color,0.5); /*rgba (46,53,66,1);*/
+    /*color: @fg_color;
+}
+
+popover button {
+    background-color: transparent;
+    color: @fg_color;
+    border: none;
+}
+
+popover button:hover,
+popover button:active:hover,
+popover button:checked {
+    background-color: @selected_bg_color;
+    color: #fff;
+    border: none;
+}
+
+popover osd  {
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);    
+/*box-shadow: 0 2px 7px 3px alpha(black, 0.5);*/
+    /*background-color: shade(@bg_color,0.5); 
+}*/
+
+
+/*GtkPopover.osd {
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);    
+/*box-shadow: 0 2px 7px 3px alpha(black, 0.5);*/
+    /*background-color: shade(@bg_color,0.5); 
+}
+
+GtkPopover .button {
+    background-color: transparent;
+    color: @fg_color;
+    border: none;
+}
+
+GtkPopover .background {
+
+    background-color: shade(@bg_color,0.5);
+
+}
+
+GtkPopover .button:hover,
+GtkPopover .button:active:hover,
+GtkPopover .button:checked:checked {
+    background-color: @selected_bg_color;
+    color: #fff;
+    border: none;
+}
+
+GtkPopover > .list,
+GtkPopover > .view,
+GtkPopover > .toolbar {
+    background-color: rgba (46,53,66,1);
+}
+
+GtkPopover.osd > .toolbar .button {
+    border-radius: 0;
+    border-width: 0;
+    background-image: none;
+    background-color: rgba (46,53,66,1);
+}
+
+GtkPopover .separator {
+    border: 0;
+    background-color: transparent;
+    color: transparent /*alpha(currentColor, 0.3)*/;
+    /*font-size: 80%;
+    font-weight: bold;
+}
+
+GtkModelButton.button,
+GtkModelButton.button:active,
+GtkModelButton.button:insensitive,
+GtkModelButton.button:active:insensitive {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    color: @fg_color;
+}
+
+GtkModelButton.button:selected {
+    background-color: @selected_bg_color;
+    background-image: none;
+    color: #fff /*@selected_bg_color*//*;
+}
+
+GtkPopover *:hover {
+    -gtk-image-effect: none;
+}
+
+GtkModelButton.button:active:hover,
+GtkModelButton.button:hover {
+    background-color: transparent;
+    background-image: none;
+    color: @selected_bg_color;
+}
+
+GraniteWidgetsPopOver {
+  -GraniteWidgetsPopOver-arrow-width: 10 ;
+  -GraniteWidgetsPopOver-arrow-height: 10;
+  -GraniteWidgetsPopOver-border-radius: 2px;
+  -GraniteWidgetsPopOver-border-width: 1;
+  -GraniteWidgetsPopOver-shadow-size: 12;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 0; }*/
+
+.popover_bg {
+  background-color: shade(@bg_color,1.5);
+  border: 1px solid rgba(0, 0, 0, 0.3); }
+
+/*GraniteWidgetsPopOver .sidebar.view, GraniteWidgetsPopOver iconview.sidebar,
+GraniteWidgetsPopOver * {
+  background-color: transparent; }*/
+
+popover,
+popover label{
+color: alpha(black,0.6);}
+
+popover scale{
+color: alpha(white, 0.5);
+background-color:transparent;
+padding:10px;
+margin:1px;}
+
+popover scale slider{
+background-color: alpha(white,0.7);
+border-radius:1px;
+padding:0px;
+}
+
+popover scale marks,
+popover scale indicator,
+{
+color:#000;}
+
+popover scale slider:hover{
+background-color: alpha(white, 0.8);}
+
+popover scale slider:active{
+background-color: white;}
+
+popover separator,
+popover.separator,
+popover .separator{
+color: #000;}
+
+popover button {
+border: none;
+margin: 2px;
+margin-right: 0px;
+margin-left: 0px;
+background-color: alpha(#fff,0.5);
+color: alpha(#000, 0.6);
+padding: 8px 15px;
+border-radius: 0px;
+box-shadow: none;}
+
+popover button:hover{ 
+color: #000;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+background-color: alpha(#fff,0.5);}
+
+
+popover button iconview{
+background-color: transparent;
+}
+
+popover button:checked{
+color:#000;}
+
+popover,
+popover.background {
+  /*background-clip: border-box;*/
+  /*padding: px;*/
+  border-radius: 2px;
+/*shade(#fff,0.94)*/
+    background-color: shade(@bg_color,1.5);
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;
+  -gtk-icon-shadow: none; }
+  .csd popover, popover, .csd
+  popover.background,
+  popover.background {
+    border: none; }
+  popover list,
+  popover.background list {
+    background-color: shade(@bg_color,1.5);
+color: #000; }
+
+popover modelbutton {
+background-color: shade(@bg_color,1.5);
+padding: 3px;
+border-radius: 0px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+
+popover modelbutton:hover{
+background-color: shade(@bg_color,1.8);
+color:#000;
+}
+
+popover modelbutton:active{
+/*background-color: @selected_bg_color;*/
+ /*currentColor*/
+color:#000;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    background-color: shade(@bg_color,2);
+}
+
+/*popover entry {
+color:#000;
+background-color: shade(rgb(32,143,143),0.5);
+}*/
+
+
+popover modelbutton box,
+popover modelbutton iconview{
+background-color: transparent;
+}
+
+popover list:hover,
+popover list:checked,
+popover cell:hover,
+popover modelbutton:checked,
+popover cell:checked {
+background-color: @selected_bg_color;
+color: transparent; /*#fff*/
+
+}
+
+  popover > list,
+  popover > .view,
+  popover > iconview,
+  popover > toolbar,
+  popover.background > list,
+  popover.background > .view,
+  popover.background > iconview,
+  popover.background > toolbar {
+border: 2px solid transparent;
+    background: none;
+    box-shadow: none; }
+  popover button.flat, popover button.sidebar-button,
+  popover button.flat:hover,
+  popover button.sidebar-button:hover,
+  popover.background button.flat,
+  popover.background button.sidebar-button,
+  popover.background button.flat:hover,
+  popover.background button.sidebar-button:hover {
+    transition: none;
+border: 2px solid transparent;}
+  popover separator,
+  popover.background separator {
+    margin: 3px; }
+  popover list separator,
+  popover.background list separator {
+    margin: 0px; }

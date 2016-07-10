@@ -1,0 +1,93 @@
+.budgie-panel {
+    border-bottom-color: transparent;
+}
+
+.max-budgie-panel {
+    border: none;
+    background-color: alpha(black, 0.5);
+}
+
+.budgie-panel *:active {
+    background-color: @bg_color;
+}
+
+.budgie-panel {
+    background-color: alpha(black, 0.5);
+}
+
+/* top panel */
+.budgie-panel.top {
+    border-top-color: @bg_color;
+}
+
+/* left panel */
+.budgie-panel.left {
+    border-left-color: @bg_color;
+}
+
+/* right panel */
+.budgie-panel.right {
+    border-right-color: @bg_color;
+}
+
+.budgie-panel .message-area {
+    border-radius: 0px;
+    border: none;
+    font: bold;
+    text-shadow: 1px 1px alpha(black, 0.3);
+    background-color: alpha(white, 0.7);
+    color: @bg_color; 
+    box-shadow: none;
+}
+
+.budgie-panel .button:hover {
+    border-color: transparent;
+    border-top-color: alpha(white,0);
+    border-bottom-color: alpha(black,0);
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+.budgie-panel .button:active,
+.budgie-panel .button:active:hover,
+.budgie-panel .button:checked:checked {
+    border-color: transparent;
+    border-top-color: alpha(white,0);
+    border-bottom-color: alpha(black,0);
+    background-color: shade(@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+
+.budgie-panel .menu-icon *,
+.budgie-panel .message-area * {
+    icon-shadow: none;
+}
+
+.max-budgie-panel .message-area {
+    box-shadow:none;
+    background-color: @bg_color;
+}
+
+.budgie-panel * {
+    icon-shadow: none;
+}
+
+.launcher * {
+    padding: 4px;
+    icon-shadow: none;
+    background-color: alpha(white, 0.2) /*@bg_color*/;
+    background-image: none;
+    color: @bg_color /*#fff*/;
+}
+
+PanelToplevel {
+    padding: 0px;
+    background-color: alpha(white, 0.9) /*@bg_color*/;
+    background-image: none;
+    color: @bg_color /*#fff*/;
+}
+
+.dark .notif-title {
+    color: @orange;
+}

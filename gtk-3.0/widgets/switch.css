@@ -1,0 +1,119 @@
+/*
+switch {
+  outline-offset: 10px;
+  -gtk-outline-radius: 100px;
+  font-size: 0;
+  outline-color: transparent;
+  /*border: 5px solid @bg_color;*/
+  /*border-radius: 100px;
+  background-color: shade(white, 0.8); }
+  switch:disabled {
+    background-color:shade(white, 0.8);
+    color: rgba(38, 50, 56, 0.3);
+    animation: flat_ripple_effect 0.1s cubic-bezier(1, 1, 1, 1) forwards; }
+  switch:active {
+    background-color: shade(rgb(32,143,143),0.9); }
+  switch:checked {
+    background-color: shade(rgb(32,143,143),0.9);
+    animation: flat_ripple_effect 0.1s cubic-bezier(1, 1, 1, 1) forwards; }
+    switch:active:disabled {
+      background-color: rgba(0, 188, 212, 0.2);
+    animation: flat_ripple_effect 0.1s cubic-bezier(1, 1, 1, 1) forwards; }
+  switch:disabled {
+    color: rgba(38, 50, 56, 0.3);
+    background-color: shade(white, 0.8); }
+  switch slider {
+    background-color: #FFFFFF;
+    color: rgba(38, 50, 56, 0.75);
+    min-width: 20px;
+    min-height: 20px;
+outline-offset:10px;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+    /*margin: -4px -1px;*/
+    /*padding: 0;
+    border-radius: 8px; }
+  switch:hover slider {
+    background-color:#fff;
+    color: #263238; }
+  switch:active slider {
+    background-color: #00BCD4;
+    color: #FFFFFF; }
+  switch:active:hover slider {
+    background-color: #00BCD4;
+    color: #FFFFFF;}
+  switch:active:disabled slider {
+    box-shadow: none;
+    background-color: alpha(currentColor, 0.2);
+    color: rgba(0, 188, 212, 0.4);
+    box-shadow: none;
+    background-color: #F0F2F3; }
+    switch:active:disabled slider > label {
+      color: inherit; }
+  switch:disabled slider {
+    box-shadow: none;
+    background-color: #F0F2F3; }
+  row:selected switch {
+    background-color: shade(white, 0.8); }
+    row:selected switch:active {
+      background-color: shade(rgb(32,143,143); }
+      row:selected switch:active:disabled {
+        background-color: shade(white, 0.8); }
+    row:selected switch slider {
+      background-color: #fff; }
+    row:selected switch:active slider {
+      background-color: #FFFFFF; }
+    row:selected switch:active:disabled slider {
+      background-color: #fff; }
+    row:selected switch:checked {
+      background-color: shade(rgb(32,143,143); }
+*/
+
+/**********
+ * Switch *
+ **********/
+switch {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;
+  margin: 6px 0;
+  border: none;
+  border-radius: 100px;
+  background-color: alpha(currentColor, 0.3);
+  background-clip: padding-box;
+  font-size: 0;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }
+  switch:disabled {
+    color: rgba(0, 0, 0, 0.32); }
+  switch:checked {
+    background-color: shade(rgb(32,143,143),0.9); }
+    switch:checked:disabled {
+      background-color: shade(rgb(32,143,143),0.9);
+      color: #fff; }
+  switch slider {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;
+    border-image: none;
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, margin 0;
+    min-width: 24px;
+    min-height: 24px;
+    margin: -4px 0 -4px -4px;
+    -gtk-outline-radius: 100px;
+    border-radius: 9px;
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)); }
+  switch:hover slider {
+    border-image: none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+  switch:disabled slider {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.32); }
+  switch:checked slider {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, margin 0, background-image 0;
+    animation: needs_attention 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    background-color:#fff;
+    margin: -4px -4px -4px 0;
+    color: #FFFFFF; }
+  switch:checked:disabled slider {
+    animation: none; }

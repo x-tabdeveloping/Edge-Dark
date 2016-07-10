@@ -1,0 +1,394 @@
+@keyframes ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 0%, transparent 0%), image(alpha(currentColor, 0)); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 100%, transparent 0%), image(alpha(currentColor, 0.15)); } }
+@keyframes flat_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 0%, transparent 0%), image(alpha(currentColor, 0.15)); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 100%, transparent 0%), image(alpha(currentColor, 0.15)); } }
+@keyframes row_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 0%, transparent 0%), image(alpha(currentColor, 0.05)); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 100%, transparent 0%), image(alpha(currentColor, 0.15)); } }
+@keyframes tab_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, rgba(0, 188, 212, 0.6) 0%, transparent 0%); }
+  50% {
+    background-image: radial-gradient(circle farthest-corner at center, rgba(0, 188, 212, 0.6) 100%, transparent 0%); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, transparent 100%, transparent 0%); } }
+@keyframes header_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, #00BCD4 0%, transparent 0%); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, #00BCD4 100%, transparent 0%); } }
+
+@keyframes spin {
+  to {
+    -gtk-icon-transform: rotate(1turn); } }
+
+@keyframes header_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, #00BCD4 0%, transparent 0%); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, #00BCD4 100%, transparent 0%); } }
+
+@keyframes tab_ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, rgba(0, 188, 212, 0.6) 0%, transparent 0%); }
+  50% {
+    background-image: radial-gradient(circle farthest-corner at center, rgba(0, 188, 212, 0.6) 100%, transparent 0%); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, transparent 100%, transparent 0%); } }
+
+@keyframes check_check {
+  from {
+    -gtk-icon-transform: rotate(90deg); }
+  to {
+    -gtk-icon-transform: unset; } }
+
+* {
+  padding: 0;
+  background-clip: padding-box;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkTextView-error-underline-color: #DD2C00;
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkTreeView-expander-size: 11;
+  -GtkTreeView-horizontal-separator: 4;
+  -GtkWidget-text-handle-width: 24;
+  -GtkWidget-text-handle-height: 24;
+  -GtkDialog-button-spacing: 4;
+  -GtkDialog-action-area-border: 0;}
+
+
+spinner {
+  color: #3872c8;
+  /*background: none;*/
+  opacity: 0;
+  background-color: transparent;
+  background-image: url("assets/process-working.svg");
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+  border-radius: 8px;
+  margin: 2px;
+  padding:5px;
+   }
+  spinner:checked {
+    opacity: 1.0;
+    animation: spin 1s linear infinite; }
+    spinner:checked:disabled {
+      opacity: 0.4; }
+  spinner:backdrop {
+    opacity: 0.8; }
+
+list.feed-list,
+list .feed-list{
+background-color: #fff;
+color: #000;}
+
+GtkImage,
+GtkImage:insensitive,
+GtkLabel,
+GtkLabel:insensitive,
+GtkBox,
+GtkBox:insensitive,
+GtkGrid,
+GtkGrid:insensitive {
+    background-color: transparent;
+}
+
+/* edge theming colors */
+@define-color edge_panel_background rgba(0, 0, 0, 0.5411764705882353);
+@define-color edge_applications_theme_color #275292;
+@define-color edge_panel_font_color #fff;
+@define-color edge_panel_menus_color #262c37;
+/* gtk palet */
+@define-color lime #a1ce4b;
+@define-color cyan #3872c8;
+@define-color yellow #eedc43;
+@define-color orange #ffa622;
+@define-color purple #9cb7e0;
+@define-color red #c72240;
+
+/* default color scheme */
+@define-color bg_color #262c37;
+@define-color fg_color #fefefe;
+@define-color base_color #262c37;
+@define-color text_color #fefefe;
+@define-color borders transparent;
+@define-color header_bg_color #262c37; /*#262c37*/
+@define-color header_fg_color #fefefe;
+@define-color selected_bg_color #3872c8;
+@define-color selected_fg_color #fefefe;
+@define-color tooltip_bg_color #fefefe;
+@define-color tooltip_fg_color #262c37;
+
+/* colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+
+/* shadow effects */
+@define-color light_shadow #fff;
+@define-color dark_shadow #000;
+
+/* misc colors used by gtk+ */
+@define-color info_fg_color #262c37;
+@define-color info_bg_color #f3f3f3;
+@define-color warning_fg_color #fefefe;
+@define-color warning_bg_color @orange;
+@define-color question_fg_color #fefefe;
+@define-color question_bg_color @cyan;
+@define-color error_fg_color #fefefe;
+@define-color error_bg_color @red;
+@define-color link_color #df253f;
+@define-color success_color #53a93f;
+@define-color warning_color #f57900;
+@define-color error_color @red;
+@define-color light_grey #dedede;
+
+/* widget colors */
+@define-color button_bg_color @theme_base_color;
+@define-color menubar_bg_color @header_bg_color;
+@define-color menubar_fg_color @header_fg_color;
+@define-color toolbar_bg_color @theme_bg_color;
+@define-color toolbar_fg_color @theme_fg_color;
+@define-color menu_bg_color @theme_base_color;
+@define-color menu_fg_color @theme_text_color;
+@define-color panel_bg_color shade(@header_bg_color, 0.8);
+@define-color panel_fg_color @header_fg_color;
+@define-color menu_selected_bg_color @selected_bg_color;
+@define-color menu_selected_fg_color @selected_fg_color;
+@define-color titlebar_bg_color @header_bg_color;
+@define-color titlebar_fg_color @header_fg_color;
+
+/* osd */
+@define-color osd_base @base_color;
+@define-color osd_fg @fg_color;
+@define-color osd_bg @bg_color;
+
+/* window manager colors */
+@define-color wm_bg @header_bg_color;
+@define-color wm_border_focused @header_bg_color;
+@define-color wm_border_unfocused @header_bg_color;
+@define-color wm_title_focused @header_fg_color;
+@define-color wm_title_unfocused alpha(@theme_fg_color, 1);
+@define-color wm_icons_focused @theme_fg_color;
+@define-color wm_icons_focused_prelight shade(@theme_selected_bg_color, 1.15);
+@define-color wm_icons_focused_pressed @theme_selected_bg_color;
+@define-color wm_icons_unfocused alpha(@theme_fg_color, 1);
+@define-color wm_icons_unfocused_prelight shade(@theme_selected_bg_color, 1.15);
+@define-color wm_icons_unfocused_pressed @theme_selected_bg_color;
+
+.view, iconview,
+.view text,
+iconview text,
+textview text {
+  color: #3c3c3e;
+  background-color: #ffffff; }
+  .view:selected, iconview:selected, .view:selected:focus, iconview:selected:focus,
+  .view text:selected,
+  iconview text:selected,
+  textview text:selected,
+  .view text:selected:focus,
+  iconview text:selected:focus,
+  textview text:selected:focus {
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+    border-radius: 2px; }
+
+icon,
+label {
+background-color: transparent;}
+
+label.separator {
+  color: rgba(60, 60, 62, 0.8); }
+
+label selection {
+  color: #ffffff;
+  background-color: #4080fb; }
+
+label{
+font: Segoe UI;}
+
+label:disabled {
+  color: #ababad; }
+
+label:selected {
+background-color:@selected_bg_color;
+}
+
+treeview{
+background-color: shade(@selected_bg_color, 0.2);}
+
+
+frame.flat,
+scrolledwindow viewport.frame,
+.frame.flat,
+GtkScrolledWindow GtkViewport.frame {
+    border: none;
+}
+
+scrolledwindow{
+background-color: @base_color;}
+
+viewport.frame{
+border: none;
+background-color:@base_color;}
+
+.content-view,
+.content-view viewport,
+.content-view GtkViewport {
+    background-color: transparent;
+    background-image: none;
+}
+
+
+notebook viewport,
+.notebook GtkViewport {
+    background-color: @base_color;
+    border-width : 0;
+}
+
+scrolledwindow viewport.frame {
+  border-style: none; }
+
+scrolledwindow junction {
+  border-style: solid none none solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; }
+  scrolledwindow junction:dir(rtl) {
+    border-style: solid solid none none; }
+
+/*****************
+ * Color Chooser *
+ *****************/
+colorswatch.top {
+  border-top-left-radius: 2.5px;
+  border-top-right-radius: 2.5px; }
+  colorswatch.top overlay {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+colorswatch.bottom {
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px; }
+  colorswatch.bottom overlay {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+colorswatch.left, colorswatch:first-child:not(.top) {
+  border-top-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px; }
+  colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+colorswatch.right, colorswatch:last-child:not(.bottom) {
+  border-top-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px; }
+  colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+colorswatch.dark overlay {
+  color: white; }
+colorswatch.light overlay {
+  color: rgba(0, 0, 0, 0.8); }
+colorswatch.dark {
+  color: white; }
+colorswatch.light {
+  color: rgba(0, 0, 0, 0.8); }
+colorswatch:drop(active) {
+  box-shadow: none; }
+  colorswatch:drop(active).light overlay {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 0 2px #FF4081; }
+  colorswatch:drop(active).dark overlay {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 0 2px #FF4081; }
+colorswatch overlay {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  colorswatch overlay:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+colorswatch#add-color-button {
+  border-radius: 2px 2px 0 0;
+  color: white; }
+  colorswatch#add-color-button:only-child {
+    border-radius: 2px; }
+  colorswatch#add-color-button overlay {
+    background-image: linear-gradient(to right, #EF5350 25%, #FFA726 25%, #FFA726 50%, #66BB6A 50%, #66BB6A 75%, #42A5F5 75%);
+    color: white; }
+colorswatch:disabled {
+  opacity: 0.4; }
+  colorswatch:disabled overlay {
+    box-shadow: none; }
+colorswatch#editor-color-sample {
+  border-radius: 2.5px; }
+  colorswatch#editor-color-sample overlay {
+    border-radius: 2px; }
+
+colorchooser .popover.osd {
+  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  border-radius: 2px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  background-color: #FFFFFF; }
+  colorchooser .popover.osd:backdrop {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+
+frame > border,
+.frame {
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  box-shadow: none; }
+  frame > border.flat,
+  .frame.flat {
+    border-style: none; }
+
+
+@import url("gtk-widgets.css");
+@import url("gtk-widgets-assets.css");
+
+@import url("widgets/app-notifications.css");
+@import url("widgets/assistant.css");
+@import url("widgets/button.css");
+@import url("widgets/cell-row.css");
+@import url("widgets/check-radio.css");
+@import url("widgets/column-header.css");
+@import url("widgets/content-view.css");
+@import url("widgets/calendar.css");
+@import url("widgets/dialogs.css");
+@import url("widgets/entry.css");
+@import url("widgets/infobar.css");
+@import url("widgets/list-boxes.css");
+@import url("widgets/menu.css");
+@import url("widgets/notebook.css");
+@import url("widgets/progress-scale.css");
+@import url("widgets/scrollbar.css");
+@import url("widgets/search-bar.css");
+@import url("widgets/separator.css");
+@import url("widgets/sidebar.css");
+@import url("widgets/spinbutton.css");
+@import url("widgets/spinner.css");
+@import url("widgets/switch.css");
+@import url("widgets/color-chooser.css");
+@import url("widgets/toolbar.css");
+@import url("widgets/osd.css");
+@import url("widgets/csd.css");
+@import url("widgets/combobox.css");
+@import url("widgets/selection-mode.css");
+@import url("widgets/popover.css");
+
+@import url("apps/budgie.css");
+@import url("apps/corebird.css");
+@import url("apps/solus-applications.css");
+@import url("apps/gala.css");
+@import url("apps/gnome-applications.css");
+@import url("apps/unity.css");
+@import url("apps/gnome-software.css");
