@@ -10,7 +10,7 @@ notebook.sidebar .view.separator {
 
 notebook {
     padding: 0;
-    background-color: rgba (46,53,66,1);
+    background-color: @bg_color;
     background-image: none;
     background-clip: border-box;
     -GtkNotebook-has-tab-gap: false;
@@ -23,7 +23,7 @@ border-right: 1px solid alpha(black,0.5);
 
 notebook tab {
     padding: 0;
-    background-color: rgba (46,53,66,1);
+    background-color: @bg_color;
     background-image: none;
     background-clip: border-box;
     -GtkNotebook-has-tab-gap: false;
@@ -46,7 +46,7 @@ notebook tab {
     box-shadow: none;
     border-left: 1px solid alpha(black,0.5);
 border-right: 1px solid alpha(black,0.5);
-    background-color: rgba (46,53,66,1) /*alpha(@theme_base_color,0.6)*/;
+    background-color: @base_color /*alpha(@theme_base_color,0.6)*/;
     border-bottom: none;
 border-top: none;			
     background-image: none;
@@ -134,17 +134,17 @@ notebook {
     border: 1px solid alpha(#000,0.1);
     border-radius: 0px; }
   notebook > stack:not(:only-child) {
-    background-color: shade(@selected_bg_color, 0.5); }
+    background-color: @bg_color; }
   notebook > header {
-    background-color: shade(@selected_bg_color, 0.6); }
+    background-color: shade(@bg_color,0.8); }
     notebook > header.top {
-      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 -1px rgba(185, 185, 185, 0.5);*/ }
+      box-shadow: none;}
     notebook > header.bottom {
-      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 1px rgba(185, 185, 185, 0.5);*/ }
+      box-shadow: none;}
     notebook > header.right {
-      box-shadow: none /*inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 1px 0 rgba(185, 185, 185, 0.5); }*/ }
+      box-shadow: none;}
     notebook > header.left {
-      /*box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset -1px 0 rgba(185, 185, 185, 0.5);*/ none }
+      box-shadow: none;}
     notebook > header.top, notebook > header.bottom {
       padding: 0 2px; }
     notebook > header.left, notebook > header.right {
@@ -170,61 +170,57 @@ notebook {
     notebook > header.right > tabs > tab {
       border-width: 1px 0 1px 1px;
       border-radius: 0; }
+notebook header tabs tab{
+color: alpha(#fff,0.8);
+border-radius:0px;}
 notebook header tabs tab:active {
-    background-color: @selected_bg_color;
+    background-color: alpha(#000,0.1);
     color: @selected_fg_color;
     animation: flat_ripple_effect 1s cubic-bezier(1, 1, 1, 1) forwards;}
     notebook > header > tabs > tab:hover {
       border-color: alpha(#000,0.1);
-      background-color: shade(@selected_bg_color, 0.95); }
-    notebook > header > tabs > tab:checked {
+      background-color: transparent;
+color:#fff; }
+    notebook > header.top > tabs > tab:checked {
       border-color: alpha(#000,0.1);
-background-color: shade(@selected_bg_color, 0.8); }
-      notebook > header > tabs > tab:checked:hover {
-        border-color: alpha(#000,0.1);
-background-color: shade(@selected_bg_color, 0.95); }
+background-color: transparent;
+      box-shadow: inset 0 -2px /*#009688*/#3F51B5;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+    notebook > header.bottom > tabs > tab:checked {
+      border-color: alpha(#000,0.1);
+background-color: transparent;
+      box-shadow: inset 0 2px /*#009688*/#3F51B5;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+    notebook > header.right > tabs > tab:checked {
+      border-color: alpha(#000,0.1);
+background-color: transparent;
+      box-shadow: inset 2px 0px /*#009688*/#3F51B5;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+    notebook > header.left > tabs > tab:checked {
+      border-color: alpha(#000,0.1);
+background-color: transparent;
+      box-shadow: inset -2px 0px /*#009688*/#3F51B5;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
     notebook > header.top > tabs > tab {
       margin-right: -1px;
       border-image: none /*linear-gradient(to bottom, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0)); */ }
-      notebook > header.top > tabs > tab:hover {
-        border-image: none;
-background-color: shade(@selected_bg_color, 0.95); }
-      notebook > header.top > tabs > tab:checked {
-        background-image: none /*linear-gradient(to bottom, #eaeaed, #e4e4e8)*/;
-        border-image: none;
-background-color: shade(@selected_bg_color, 0.8); }
-    notebook > header.bottom > tabs > tab {
+    notebook > header.bottom > tabs > tab:checked {
       margin-right: -1px;
       border-image: none /*linear-gradient(to top, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0))*/; }
       notebook > header.bottom > tabs > tab:hover {
         border-image: none;
 background-color: shade(@selected_bg_color, 0.95); }
-      notebook > header.bottom > tabs > tab:checked {
-        background-image: none /*linear-gradient(to top, #e4e4e8, #eaeaed)*/;
-        border-image: none; 
-background-color: shade(@selected_bg_color, 0.8);}
     notebook > header.left > tabs > tab {
       margin-bottom: -1px;
       border-image: /*linear-gradient(to right, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0));*/ none; }
-      notebook > header.left > tabs > tab:hover {
-        border-image: none;
-background-color: shade(@selected_bg_color, 0.95); }
-      notebook > header.left > tabs > tab:checked {
-        background-image: /*linear-gradient(to right, #e4e4e8, #eaeaed)*/ none;
-        border-image: none;
-background-color: shade(@selected_bg_color, 0.8); }
-    notebook > header.right > tabs > tab {
-      margin-bottom: -1px;
-      border-image: /*linear-gradient(to left, rgba(185, 185, 185, 0.7), rgba(245, 245, 247, 0))*/ none; }
-      notebook > header.right > tabs > tab:hover {
-        border-image: none; }
       notebook > header.right > tabs > tab:checked {
         background-image: /*linear-gradient(to left, #e4e4e8, #eaeaed)*/ none;
         border-image: none; }
-    notebook > header.top > tabs > tab, notebook > header.bottom > tabs > tab {
-      border-image-slice: 0 1 0 1; }
-    notebook > header.left > tabs > tab, notebook > header.right > tabs > tab {
-      border-image-slice: 1 0 1 0; }
     notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
       notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > tabs > arrow.up:last-child {
@@ -251,7 +247,7 @@ background-color: shade(@selected_bg_color, 0.8); }
         color: rgba(171, 171, 173, 0.7); }
   notebook > header > tabs > tab label {
     padding: 0 2px;
-    color: #fff;
+    color: alpha(#fff,0.6);
     text-shadow: none; }
   notebook > header > tabs > tab:hover label {
     color: #fff; }
@@ -274,15 +270,22 @@ box-shadow: none; }
       margin-left: -5px;
       margin-right: 5px; 
 box-shadow: none; }
+
+    notebook > header > tabs > tab button.flat, notebook > header > tabs > tab button.sidebar-button {
+      padding:5px;}
     notebook > header > tabs > tab button.flat:hover, notebook > header > tabs > tab button.sidebar-button:hover {
       border: /*1px solid #b9b9b9*/ none;
-      color: shade(rgb(32,143,143),1.1);
-      background-image: none;
+      border-radius: 15px;
+      color: #fff;
+      padding:5px;
+      background-color: alpha(#fff,0.1);
       box-shadow: none; }
     notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active {
       border: /*1px solid #b9b9b9*/ none;
-      color: shade(rgb(32,143,143),1.1);
-      background-image: /*linear-gradient(to bottom, #d9d9e0, #e7e7ec)*/ none;
+      color: #fff;
+      border-radius: 15px;
+      padding:5px;
+      background-color: #3F51B5;
       box-shadow: /*inset 0 1px rgba(0, 0, 0, 0.07), inset 0 2px 1px -2px rgba(0, 0, 0, 0.6)*/ none;
       -gtk-icon-shadow: none; }
   notebook > header > tabs > tab:hover button.flat:not(:hover):not(:active), notebook > header > tabs > tab:hover button.sidebar-button:not(:hover):not(:active),

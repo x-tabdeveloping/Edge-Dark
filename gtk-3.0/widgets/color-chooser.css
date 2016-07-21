@@ -1,91 +1,62 @@
 /*****************
- * color chooser *
+ * Color Chooser *
  *****************/
-GtkColorSwatch,
-GtkColorSwatch:selected {
-    border-width: 1px;
-    border-style: solid;
-    border-color: alpha(black, 0.1);
-    border-radius: 1px;
-    background-color: transparent;
-    background-clip: border-box;
-}
+colorswatch {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16); }
+  colorswatch.top {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  colorswatch.bottom {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch.left, colorswatch:first-child:not(.overlay):not(.top) {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  colorswatch.right, colorswatch:last-child:not(.overlay):not(.bottom) {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch:only-child:not(.overlay) {
+    border-radius: 2px; }
+  colorswatch.top > .overlay {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  colorswatch.bottom > .overlay {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch:first-child:not(.top) > .overlay {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  colorswatch:last-child:not(.bottom) > .overlay {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch:only-child > .overlay {
+    border-radius: 2px; }
+  colorswatch:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2); }
+  GtkColorEditor colorswatch {
+    border-radius: 2px; }
+    GtkColorEditor colorswatch:hover {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16); }
+  colorswatch.color-dark {
+    color: white; }
+  colorswatch.color-light {
+    color: rgba(0, 0, 0, 0.8); }
+  colorswatch#add-color-button {
+    background-image: linear-gradient(to right, #FF1744 25%, #FF9100 25%, #FF9100 50%, #00E5FF 50%, #00E5FF 75%, #FFEA00 75%);
+    color: white; }
 
-GtkColorSwatch:hover,
-GtkColorSwatch:selected:hover {
-    border-color: alpha(black, 0.3);
-}
+colorchooser .popover.osd {
+  padding: 3px;
+  border-style: solid;
+  border-width: 9px;
+  border-radius: 2px;
+  border-image: -gtk-scaled(url("assets/osd-shadow-dark.png"), url("assets/osd-shadow-dark@2.png")) 10/10px stretch;
+  box-shadow: none;
+  color: #ECEFF1;
+  background-color: #2a373e; }
+  colorchooser .popover.osd:backdrop {
+    border-image: -gtk-scaled(url("assets/osd-shadow-backdrop-dark.png"), url("assets/osd-shadow-backdrop-dark@2.png")) 10/10px stretch; }
+  colorchooser .popover.osd label {
+    color: #1DE9B6;
+    font-weight: 700; }
 
-GtkColorSwatch.color-light:selected:hover,
-GtkColorSwatch.color-dark:selected:hover {
-    background-image: none;
-}
-
-GtkColorSwatch.left,
-GtkColorSwatch:first-child {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-GtkColorSwatch.right,
-GtkColorSwatch:last-child {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-GtkColorSwatch:only-child {
-    border-radius: 0px;
-}
-
-GtkColorSwatch.top {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-
-GtkColorSwatch.bottom {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-GtkColorChooserWidget #add-color-button {
-    background-clip: padding-box;
-    border-color: alpha(black, 0.1);
-    background-color: shade(@theme_bg_color, 0.95);
-    color: @theme_fg_color;
-}
-
-GtkColorChooserWidget #add-color-button:hover {
-    border-color: alpha(black, 0.3);
-    background-color: shade(@theme_bg_color, 0.90);
-    color: @theme_fg_color;
-}
-
-.color-active-badge,
-.color-active-badge:selected {
-    border-width: 1px;
-    border-style: solid;
-    border-width: 2px;
-    background-color: transparent;
-}
-
-.color-active-badge.color-light,
-.color-active-badge.color-light:hover {
-    border-color: alpha(black, 0.3);
-    color: alpha(black, 0.3);
-}
-
-.color-active-badge.color-dark,
-.color-active-badge.color-dark:hover {
-    border-color: alpha(white, 0.3);
-    color: alpha(white, 0.3);
-}
-
-GtkColorEditor GtkColorSwatch {
-    border-radius: 0px;
-}
-
-GtkColorEditor GtkColorSwatch.color-dark:hover,
-GtkColorEditor GtkColorSwatch.color-light:hover {
-    background-image: none;
-    border-color: alpha(black, 0.3);
-}

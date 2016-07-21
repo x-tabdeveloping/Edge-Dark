@@ -34,8 +34,14 @@ button.toggle:checked,
 button.radio:active,
 button.radio:checked{
         box-shadow: inset 0 -2px @selected_bg_color;
-background-color: transparent;
+background-color: alpha(#fff,0.1);
 }
+
+button.combo{
+border-radius:2px;
+box-shadow:none;
+}
+
 
 button image {
 background-color: transparent;

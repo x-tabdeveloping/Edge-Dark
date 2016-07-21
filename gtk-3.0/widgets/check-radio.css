@@ -1,9 +1,10 @@
+le
 /*******************
  * check and radio *
  *******************/
 @keyframes check_check {
   from {
-    -gtk-icon-transform: rotate(90deg); }
+    -gtk-icon-transform: rotate(180deg); }
   to {
     -gtk-icon-transform: unset; } }
 @keyframes check_radio {
@@ -22,20 +23,20 @@
 check {
   -gtk-icon-source: -gtk-icontheme("emblem-ok-symbolic"); 
   icon-shadow: none;
-  color:#000;
-  border-radius: 8px;
+  color:#fff;
+  border-radius: 15px;
   margin: 4px;
-padding: 3px;
-  background-color: alpha(#fff,0.5);
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }
+padding: 5px;
+  background-color: alpha(#fff,0.05);
+  /*transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }*/}
   check:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
 
 check:hover {
   icon-shadow: none;
-  background-color: alpha(rgb(56,106,139),0.7);  }
+  background-color: alpha(currentColor,0.08);  }
   check:hover:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
@@ -43,6 +44,7 @@ check:hover {
 check:active {
   icon-shadow: none;
   animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
+background-color: #E91E63;
  }
   check:active:backdrop {
     opacity: 0.8;
@@ -50,14 +52,14 @@ check:active {
 
 check:insensitive {
   icon-shadow: none;
-  background-color: alpha(rgb(56,106,139),0.2); }
+  background-color: alpha(#fff,0.2); }
   check:insensitive:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
 
 check:inconsistent {
   icon-shadow: none;
-  background-color: alpha(rgb(56,106,139),0.3); }
+  background-color: alpha(#fff,0.05); }
   check:inconsistent:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
@@ -86,10 +88,10 @@ check:inconsistent:insensitive {
 check:checked {
   icon-shadow: none;
   animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
- background-color: alpha(rgb(56,106,139),0.9);
+ background-color: #E91E63;
     animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
-  background-color: alpha(rgb(56,106,139),0.8);
+  background-color: #E91E63;
 }
   check:checked:backdrop {
     opacity: 0.8;
@@ -98,7 +100,7 @@ check:checked {
 
 check:checked:hover {
   icon-shadow: none;
-  background-color: alpha(rgb(56,106,139),0.8); }
+  background-color: shade(#E91E63,0.9); }
   check:checked:hover:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
@@ -119,21 +121,25 @@ check:checked:insensitive {
     transition: 0.2s; }
 
 radio {
-border-radius: 10px;
+border-radius: 0px;
 padding: 0px;
-border: 2px solid alpha(#fff,0.08);
+border: 0px solid shade(#00BCD4,0.8);
 margin: 4px;
-background-color: alpha(shade(#673AB7, 0.5),0.5);
+background-color: shade(#fff,0.5);
 color: transparent;
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent; }
 }
+
+
+
 radio:hover{
- background-color:alpha(#673AB7, 0.7);
+ border:0px solid #E91E63;
+color: transparent;
+background-color: shade(#00BCD4,0.8);
 }
 radio:active,
 radio:checked{
-background-color: #673AB7;
+color: transparent;
+background-color: #00BCD4;
     animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
 }

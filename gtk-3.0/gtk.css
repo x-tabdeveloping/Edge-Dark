@@ -26,6 +26,12 @@
   to {
     background-image: radial-gradient(circle farthest-corner at center, #00BCD4 100%, transparent 0%); } }
 
+@keyframes cica_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 0%, transparent 0%), image(alpha(currentColor, 0)); }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.01) 100%, transparent 0%), image(alpha(currentColor, 0.01)); } }
+
 @keyframes spin {
   to {
     -gtk-icon-transform: rotate(1turn); } }
@@ -268,76 +274,69 @@ scrolledwindow junction {
   scrolledwindow junction:dir(rtl) {
     border-style: solid solid none none; }
 
+
 /*****************
  * Color Chooser *
  *****************/
-colorswatch.top {
-  border-top-left-radius: 2.5px;
-  border-top-right-radius: 2.5px; }
-  colorswatch.top overlay {
+colorswatch {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16); }
+  colorswatch.top {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
-colorswatch.bottom {
-  border-bottom-left-radius: 2.5px;
-  border-bottom-right-radius: 2.5px; }
-  colorswatch.bottom overlay {
+  colorswatch.bottom {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
-colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 2.5px;
-  border-bottom-left-radius: 2.5px; }
-  colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
+  colorswatch.left, colorswatch:first-child:not(.overlay):not(.top) {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px; }
-colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 2.5px;
-  border-bottom-right-radius: 2.5px; }
-  colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
+  colorswatch.right, colorswatch:last-child:not(.overlay):not(.bottom) {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px; }
-colorswatch.dark overlay {
-  color: white; }
-colorswatch.light overlay {
-  color: rgba(0, 0, 0, 0.8); }
-colorswatch.dark {
-  color: white; }
-colorswatch.light {
-  color: rgba(0, 0, 0, 0.8); }
-colorswatch:drop(active) {
-  box-shadow: none; }
-  colorswatch:drop(active).light overlay {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 0 2px #FF4081; }
-  colorswatch:drop(active).dark overlay {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 0 2px #FF4081; }
-colorswatch overlay {
-  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  colorswatch overlay:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
-colorswatch#add-color-button {
-  border-radius: 2px 2px 0 0;
-  color: white; }
-  colorswatch#add-color-button:only-child {
+  colorswatch:only-child:not(.overlay) {
     border-radius: 2px; }
-  colorswatch#add-color-button overlay {
-    background-image: linear-gradient(to right, #EF5350 25%, #FFA726 25%, #FFA726 50%, #66BB6A 50%, #66BB6A 75%, #42A5F5 75%);
+  colorswatch.top > .overlay {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  colorswatch.bottom > .overlay {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch:first-child:not(.top) > .overlay {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  colorswatch:last-child:not(.bottom) > .overlay {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  colorswatch:only-child > .overlay {
+    border-radius: 2px; }
+  colorswatch:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2); }
+  GtkColorEditor colorswatch {
+    border-radius: 2px; }
+    GtkColorEditor colorswatch:hover {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16); }
+  colorswatch.color-dark {
     color: white; }
-colorswatch:disabled {
-  opacity: 0.4; }
-  colorswatch:disabled overlay {
-    box-shadow: none; }
-colorswatch#editor-color-sample {
-  border-radius: 2.5px; }
-  colorswatch#editor-color-sample overlay {
-    border-radius: 2px; }
+  colorswatch.color-light {
+    color: rgba(0, 0, 0, 0.8); }
+  colorswatch#add-color-button {
+    background-image: linear-gradient(to right, #FF1744 25%, #FF9100 25%, #FF9100 50%, #00E5FF 50%, #00E5FF 75%, #FFEA00 75%);
+    color: white; }
 
 colorchooser .popover.osd {
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  padding: 3px;
+  border-style: solid;
+  border-width: 9px;
   border-radius: 2px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
-  background-color: #FFFFFF; }
+  border-image: -gtk-scaled(url("assets/osd-shadow-dark.png"), url("assets/osd-shadow-dark@2.png")) 10/10px stretch;
+  box-shadow: none;
+  color: #ECEFF1;
+  background-color: #2a373e; }
   colorchooser .popover.osd:backdrop {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    border-image: -gtk-scaled(url("assets/osd-shadow-backdrop-dark.png"), url("assets/osd-shadow-backdrop-dark@2.png")) 10/10px stretch; }
+  colorchooser .popover.osd label {
+    color: #1DE9B6;
+    font-weight: 700; }
+
 
 
 frame > border,
@@ -350,6 +349,37 @@ frame > border,
   frame > border.flat,
   .frame.flat {
     border-style: none; }
+
+actionbar,
+actionbar revealer{
+padding-top:5px;
+padding-bottom:5px;
+background-color:shade(@bg_color,0.8);
+box-shadow: inset 0 1px alpha(#000,0.5);}
+
+actionbar button{
+background-color:transparent;
+box-shadow:none;
+border-radius:2px;
+color:alpha(#fff,0.7)}
+
+actionbar button:hover{
+color: #fff;
+background-color:transparent;}
+actionbar button:active{
+background-color: alpha(#fff,0.1);
+color:#fff;
+box-shadow:none;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+actionbar button:checked{
+background-color: alpha(#fff,0.1);
+color:#fff;
+box-shadow:none;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
 
 
 @import url("gtk-widgets.css");

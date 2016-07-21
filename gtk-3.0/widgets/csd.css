@@ -129,8 +129,8 @@ headerbar button.toggle:checked,
 headerbar button.radio:active,
 headerbar button.radio:checked{
 background-color:transparent;
-animation:check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
- transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
 /*border-bottom:2px solid @selected_bg_color;*/
         box-shadow: inset 0 -2px @selected_bg_color;
 
@@ -140,6 +140,8 @@ animation:check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
 headerbar button.radio:active,
 headerbar button.radio:checked{
 box-shadow: inset 0 -2px #009688;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
 }
 
 headerbar button.radio{
