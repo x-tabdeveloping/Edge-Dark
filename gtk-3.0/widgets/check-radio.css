@@ -121,25 +121,30 @@ check:checked:insensitive {
     transition: 0.2s; }
 
 radio {
-border-radius: 0px;
-padding: 0px;
+border-radius: 15px;
+padding: 3px;
 border: 0px solid shade(#00BCD4,0.8);
 margin: 4px;
 background-color: shade(#fff,0.5);
-color: transparent;
+color: #fff;
+  -gtk-icon-source: -gtk-icontheme("process-completed-symbolic"); 
 }
 
 
 
 radio:hover{
  border:0px solid #E91E63;
-color: transparent;
-background-color: shade(#00BCD4,0.8);
+color: #fff;
+background-color: shade(@selected_bg_color,0.8);
 }
-radio:active,
+
+radio:active{
+  animation: check_check 0.4s cubic-bezier(0, 0, 0.2, 1);
+background-color:@selected_bg_color;}
+
 radio:checked{
-color: transparent;
+color: #fff;
 background-color: #00BCD4;
-    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
+    animation: cica_effect 0.7s cubic-bezier(0, 0, 0.2, 1) forwards;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
 }

@@ -84,7 +84,9 @@ switch {
   switch:disabled {
     color: rgba(0, 0, 0, 0.32); }
   switch:checked {
-    background-color: shade(rgb(32,143,143),0.9); }
+    background-color: shade(rgb(32,143,143),0.9);
+    animation: cica_effect 0.7s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0; }
     switch:checked:disabled {
       background-color: shade(rgb(32,143,143),0.9);
       color: #fff; }

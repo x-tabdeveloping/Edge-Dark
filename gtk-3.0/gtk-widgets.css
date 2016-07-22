@@ -586,7 +586,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
  * scrolled window *
  *******************/
 GtkScrolledWindow.frame {
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     border-color: #fff;
     border-radius: 0;
@@ -597,5 +597,13 @@ GtkScrolledWindow.frame {
 GtkScrolledWindow GtkViewport.frame {
     border-style: none;
 }
+
+scrolledwindow junction {
+  border-style: solid none none solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; }
+  scrolledwindow junction:dir(rtl) {
+    border-style: solid solid none none; }
 
 
