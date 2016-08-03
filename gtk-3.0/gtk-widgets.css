@@ -427,6 +427,11 @@ GtkBubbleWindow .toolbar {
     background-color: transparent;
 }
 
+undershoot {
+  background-color: transparent;
+  background-image: none;
+}
+
 /**************
  * Overshoots *
  **************/

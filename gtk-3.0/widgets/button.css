@@ -24,7 +24,10 @@ button.radio{
 background-color:transparent;
 box-shadow: none;
 border-radius: 0px;
-color:alpha(#fff,0.7);}
+color:alpha(#fff,0.7);
+margin: 0px;
+padding:10px;
+border:none;}
 button.toggle:hover,
 button.radio:hover{
 color:#fff;
@@ -33,8 +36,11 @@ button.toggle:active,
 button.toggle:checked,
 button.radio:active,
 button.radio:checked{
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
         box-shadow: inset 0 -2px @selected_bg_color;
-background-color: alpha(#fff,0.1);
+background-color: #000;
+background-image: none;
 }
 
 button.combo{

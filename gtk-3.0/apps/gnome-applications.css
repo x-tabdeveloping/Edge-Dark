@@ -128,7 +128,7 @@ VteTerminal {
 /*********
  * gedit *
  *********/
-.gedit-window headerbar {
+GeditWindow headerbar {
    background-color: rgba (112,126,147,1);
    color: #fff;
 }
@@ -333,7 +333,7 @@ XfceHeading {
     -gtk-image-effect: none;
 }
 
-/*Photos
+Photos
 
 PhotosMainWindow .titlebar,
 PhotosMainWindow .header-bar {
@@ -376,4 +376,4 @@ PhotosMainWindow .search-bar {
 PhotosMainWindow.background {
     background-color: #000
 }
-*/
+
