@@ -381,6 +381,28 @@ box-shadow:none;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
 
 
+button.radio.image-button {
+background-color: #000;}
+
+button.radio.image-button:checked{
+box-shadow: inset 0 2px #3F51B5;
+background-color: rgb(15,15,15); }
+
+button.radio.image-button:active{
+background-color:rgb(25,25,25);
+animation:none}
+
+button.flat{
+background-color: alpha(#000,0.05);
+border-radius:100px;}
+
+button.flat:hover{
+background-color: alpha(#000,0.08);
+color:#fff;}
+
+button.flat:active{
+background-color: #3F51B5;}
+
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");

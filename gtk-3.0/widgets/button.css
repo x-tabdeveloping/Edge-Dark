@@ -20,7 +20,7 @@ button {
 }
 
 button.toggle,
-button.radio{
+button.radio:not(.image-button){
 background-color:transparent;
 box-shadow: none;
 border-radius: 0px;
@@ -29,13 +29,13 @@ margin: 0px;
 padding:10px;
 border:none;}
 button.toggle:hover,
-button.radio:hover{
+button.radio:hover:not(.image-button){
 color:#fff;
 background-color:transparent;}
 button.toggle:active,
 button.toggle:checked,
-button.radio:active,
-button.radio:checked{
+button.radio:active:not(.image-button),
+button.radio:checked:not(.image-button){
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
         box-shadow: inset 0 -2px @selected_bg_color;
@@ -93,46 +93,29 @@ button:insensitive {
 /****************
 * "flat" button *
 *****************/
-button.flat,
-.action-bar .button,
-.inline-toolbar .button,
-.osd .button,
-.osd.button {
-    border: none;
-    background-color: transparent;
-    background-image: none;
-    color: @fg_color;
-    font: bold;
-}
+box.topbar button.radio.image-button {
+background-color: #000;}
+box.topbar{
+background-color: #000}
 
-button.flat:hover,
-.action-bar .button:hover,
-.inline-toolbar .button:hover,
-.action-bar .button:hover {
-    border: none;
-    transition: color 150ms ease-in;
-    color: @selected_bg_color;
-}
+box.topbar button.radio.image-button:checked{
+box-shadow: inset 0 2px #3F51B5;
+background-color: rgb(15,15,15); }
 
-button.flat:active,
-button.flat:active:focus,
-button.flat:checked,
-button.flat:active:checked,
-button.flat:active:checked:focus,
-.action-bar .button:checked,
-.action-bar .button:active {
-    border: none;
-    transition: color 150ms ease-in;
-    color: shade(@selected_bg_color, 0.9);
-    background-color: transparent;
-}
+box.topbar button.radio.image-button:active{
+background-color:rgb(25,25,25);
+animation:none;}
 
-button.flat:active:hover {
-    border: none;
-    transition: color 150ms ease-in;
-    color: @selected_bg_color;
-    background-color: transparent;
-}
+button.flat{
+background-color: alpha(#000,0.05);
+border-radius:100px;}
+
+button.flat:hover{
+background-color: alpha(#000,0.08);
+color:#fff;}
+
+button.flat:active{
+background-color: #3F51B5;}
 
 /****************
 * linked button *
