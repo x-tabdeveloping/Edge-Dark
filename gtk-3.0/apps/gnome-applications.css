@@ -15,7 +15,11 @@
     background-color: @gnome-software;
 }
 
-
+/*.nautilus-desktop,
+.nautilus-desktop * {
+color:@fg_color;
+background-color: transparent;}
+*/
 /************
  * nautilus *
  ************/
@@ -30,11 +34,14 @@ NautilusWindow .titlebar .button:active {
 }*/
 
 
-.nautilus-window {
+/*.nautilus-desktop {
+background-color: transparent;}
+*/
+/*.nautilus-window {
 background-color: @bg_color;
 }
-
-.nautilus-window headerbar button.image-button:not(.toggle):not(.radio),
+*/
+/*.nautilus-window headerbar button.image-button:not(.toggle):not(.radio),
 .nautilus-window headerbar button.slider-button{
 border-radius:15px;
 background-color: transparent;}
@@ -49,25 +56,26 @@ background-color: #009688;
     transition: all 0.4s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: ripple_effect 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;}
 
+*/
 
-.nautilus-desktop {
-  color: @bg_color;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-
-NautilusWindow background {
-background-color: @bg_color;
-}
-
-.nautilus-window,
+/*.nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background: @bg_color; }
-
+*/
 .nautilus-window headerbar,
 .nautilus-window .titlebar{
 background-color: #000;
 color:#fff;}
 
+.nautilus-window *:not(.titlebar):not(headerbar):not(popover):not(scale):not(button):not(modelbutton):not(check):not(radio):not(slider):not(scale):not(.horizontal):not(.menu):not(sidebar):not(placesidebar):not(list):not(row):not(selection):not(.selected){
+background-color:transparent;}
+
+.nautilus-window popover scale{
+background-color:alpha(#000,0.5)}
+
+.nautilus-window placesidebar button:active{
+background-color:@selected_bg_color;}
 /*.nautilus-window entry{
 background-color: alpha(white,0.1);}
 
@@ -86,11 +94,8 @@ background-color:  @selected_bg_color;}
 .nautilus-window .titlebar .titlebutton{
 background-color: transparent;}*/
 
-NautilusWindow.background {
-background-color: @bg_color;
-}
 
-NautilusCanvasViewContainer {
+/*NautilusCanvasViewContainer {
 background-color: @base_color;
 }
 
@@ -98,6 +103,19 @@ background-color: @base_color;
 NautilusCanvasViewContainer .background {
 background-color: @base_color;
 }
+*/
+
+.nautilus-desktop-window,
+.nautilus-desktop-window notebook,
+.nautilus-desktop-window notebook > stack {
+  background: transparent; }
+
+.nautilus-desktop.nautilus-canvas-item {
+  color: #FFFFFF;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+  text-shadow: none; }
 
 /******************
  * gnome terminal *
