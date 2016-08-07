@@ -90,6 +90,17 @@ spinner {
   spinner:backdrop {
     opacity: 0.8; }
 
+dialog headerbar,
+dialog .titlebar,
+dialog decoration{
+border-radius: 0px;
+background-color: #275292;
+color: #000;}
+
+dialog headerbar,
+dialog .titlebar{
+padding: 2px;}
+
 list.feed-list,
 list .feed-list{
 background-color: #fff;
@@ -392,17 +403,22 @@ button.radio.image-button:active{
 background-color:rgb(25,25,25);
 animation:none}
 
-button.flat{
+image{
+background-color:transparent;}
+
+button.flat.image-button{
 background-color: alpha(#000,0.05);
 border-radius:100px;}
 
-button.flat:hover{
+button.flat.image-button:hover{
 background-color: alpha(#000,0.08);
 color:#fff;}
 
-button.flat:active{
+button.flat.image-button:active{
 background-color: #3F51B5;}
 
+button.flat.toggle{
+border-radius: 0px;}
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");

@@ -34,14 +34,16 @@ color:#fff;
 background-color:transparent;}
 button.toggle:active,
 button.toggle:checked,
-button.radio:active:not(.image-button),
-button.radio:checked:not(.image-button){
+{
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
         box-shadow: inset 0 -2px @selected_bg_color;
-background-color: #000;
 background-image: none;
 }
+
+button.radio:active:not(.image-button),
+button.radio:checked:not(.image-button){
+        box-shadow: inset 0 -2px #009688;}
 
 button.combo{
 border-radius:2px;
@@ -106,15 +108,15 @@ box.topbar button.radio.image-button:active{
 background-color:rgb(25,25,25);
 animation:none;}
 
-button.flat{
+button.flat:not(.radio){
 background-color: alpha(#000,0.05);
 border-radius:100px;}
 
-button.flat:hover{
+button.flat:hover:not(.radio){
 background-color: alpha(#000,0.08);
 color:#fff;}
 
-button.flat:active{
+button.flat:active:not(.radio){
 background-color: #3F51B5;}
 
 /****************
