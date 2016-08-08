@@ -64,7 +64,7 @@ background-color: #009688;
   background: @bg_color; }
 */
 
-.nautilus-window *:not(.titlebar):not(headerbar):not(popover):not(scale):not(button):not(modelbutton):not(check):not(radio):not(slider):not(scale):not(.horizontal):not(.menu):not(sidebar):not(placesidebar):not(list):not(row):not(selection):not(.selected):not(menu):not(.menu):not(.csd):not(:hover):not(:active):not(decoration){
+.nautilus-window *:not(.titlebar):not(headerbar):not(popover):not(scale):not(button):not(modelbutton):not(check):not(radio):not(slider):not(scale):not(.horizontal):not(.menu):not(sidebar):not(placesidebar):not(list):not(row):not(selection):not(.selected):not(menu):not(.menu):not(.csd):not(:hover):not(:active):not(decoration):not(progressbar){
 background-color:transparent;}
 
 .nautilus-window decoration{
