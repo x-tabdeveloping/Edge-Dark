@@ -68,6 +68,12 @@ outline-offset:10px;
       background-color: shade(rgb(32,143,143); }
 */
 
+@keyframes check_check {
+  from {
+    -gtk-icon-transform: rotate(180deg); }
+  to {
+    -gtk-icon-transform: unset; } }
+
 /**********
  * Switch *
  **********/
@@ -91,26 +97,29 @@ switch {
       background-color: shade(rgb(32,143,143),0.9);
       color: #fff; }
   switch slider {
-    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;
-    border-image: none;
+    /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0;*/
+   /* border-image: none;*/
+-gtk-icon-source: -gtk-icontheme("emblem-ok-symbolic");
   transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;
     background-color: #FFFFFF;
-    color: rgba(0, 0, 0, 0.8);
-    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, margin 0;
+    color: #000;;
+    /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, margin 0;*/
     min-width: 24px;
     min-height: 24px;
     margin: -4px 0 -4px -4px;
     -gtk-outline-radius: 100px;
     border-radius: 9px;
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)); }
+    /*background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent));*/  }
   switch:hover slider {
     border-image: none;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   switch:disabled slider {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: #fff;
-    color: rgba(0, 0, 0, 0.32); }
+    color: #000; }
+switch:active slider {
+  animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);}
   switch:checked slider {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, margin 0, background-image 0;
     animation: needs_attention 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;

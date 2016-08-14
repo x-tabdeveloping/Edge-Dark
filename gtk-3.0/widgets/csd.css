@@ -125,6 +125,26 @@ margin:0px;
 padding:10px;
 border:none;}
 
+headerbar button.radio.text-button{
+padding: 10px 30px;
+border-radius:1px;}
+
+
+headerbar button.radio:active.text-button{
+background-color: alpha(#fff,0.05);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+/*button.radio:active:not(.image-button),*/
+headerbar button.radio:checked:not(.image-button){
+        box-shadow: inset 0 -2px #009688;}
+
+headerbar button.radio.text-button:checked{
+background-color: transparent;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+
 headerbar button.toggle:checked
 {
 background-color:transparent;
@@ -136,21 +156,21 @@ background-color:transparent;
 
 }
 
-headerbar button.radio:checked
+/*headerbar button.radio:checked
 {
 background-color:transparent;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
 /*border-bottom:2px solid @selected_bg_color;*/
-        box-shadow: inset 0 -2px #009688;}
-
+     /*   box-shadow: inset 0 -2px #009688;}
+*/
 headerbar button.toggle:active{
 background-color: shade(@bg_color,0.9);
 box-shadow:none;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
 headerbar button.radio:active{
-border-radius: 2px;}
+border-radius: 0px;}
 headerbar button.toggle:active{
 border-radius: 0px;}
 
@@ -176,39 +196,44 @@ background-color: #009688;
     transition: all 0.4s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: ripple_effect 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;}
 
-headerbar button.radio:checked{
+/*headerbar button.radio:checked{
 background-color: shade(@bg_color,0.9);}
-
+*/
+/*headerbar button.radio:active{
+box-shadow:none;}
+*/
 headerbar button.text-button:not(.toggle):not(.radio) {
 border-radius: 2px;
-    outline-offset: -2px;
-outline-color: #fff;
-outline-style: dashed;
-background-color: #E91E63;
-box-shadow: inset 0 1px alpha(#fff,0.2);
-  transition: box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22), 0 2px 2px transparent;
+box-shadow: none;
+background-color: shade(#275292,1.5);
 }
-
+/*
 headerbar button.text-button:not(.toggle):not(.radio) {
 box-shadow: inset 0 1px alpha(#fff,0.2);
-}
+}*/
 headerbar button.text-button:not(.toggle):not(.radio):hover {
-background-color: shade(#E91E63,0.9);
-}
+border-radius: 2px;
+box-shadow: none;
+background-color: shade(#275292,1.8);}
 
 headerbar button.text-button:not(.toggle):not(.radio):active {
-background-color: #2196F3; 
-animation:none;    
-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
-    /*animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; */}
+border-radius: 2px;
+box-shadow: none;
+background-color: #009688;
+    transition: all 0.1s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.1s cubic-bezier(0, 0, 0.2, 1) forwards; }
 
-headerbar button.radio:active,
+/*headerbar button.radio:active{
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+box-shadow: none;   
+ animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
+}
+
 headerbar button.radio:checked{
 box-shadow: inset 0 -2px #009688;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; 
-}
+}*/
 
 headerbar button.radio{
 padding-left: 30px;

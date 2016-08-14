@@ -43,8 +43,9 @@ check:hover {
 
 check:active {
   icon-shadow: none;
-  animation: check_check 0.3s cubic-bezier(0, 0, 0.2, 1);
 background-color: #E91E63;
+    animation: cica_effect 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
  }
   check:active:backdrop {
     opacity: 0.8;
@@ -119,6 +120,11 @@ check:checked:insensitive {
   check:checked:insensitive:backdrop {
     opacity: 0.8;
     transition: 0.2s; }
+
+check:checked{
+  animation: check_check 0.4s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0; }
+
 
 radio {
 border-radius: 15px;

@@ -101,6 +101,26 @@ dialog headerbar,
 dialog .titlebar{
 padding: 2px;}
 
+.nautilus-window dialog headerbar button.text-button{
+border-radius: 0px;
+box-shadow: none;
+background-color: shade(#275292,1.5);}
+
+.nautilus-window dialog headerbar button.text-button:hover{
+border-radius: 0px;
+box-shadow: none;
+background-color: shade(#275292,1.8);}
+
+.nautilus-window dialog headerbar button.text-button:active{
+border-radius: 0px;
+box-shadow: none;
+background-color: #009688;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+button.radio:checked{
+background-color: transparent;}
+
 list.feed-list,
 list .feed-list{
 background-color: #fff;
