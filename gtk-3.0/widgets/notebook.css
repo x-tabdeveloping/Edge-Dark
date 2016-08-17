@@ -260,7 +260,7 @@ background-color: shade(@selected_bg_color, 0.95); }
     border: /*1px solid transparent*/ none;
     border-radius: 2px;
     transition-duration: 100ms;
-    color: #fff;
+    color: alpha(#fff,0.7);
     -gtk-icon-shadow: none; }
     notebook > header > tabs > tab button.flat:last-child, notebook > header > tabs > tab button.sidebar-button:last-child {
       margin-right: -5px;
@@ -280,6 +280,19 @@ box-shadow: none; }
       padding:5px;
       background-color: alpha(#fff,0.1);
       box-shadow: none; }
+
+notebook header tabs tab button.flat box{
+background-color:transparent;}
+
+notebook header tabs tab button.flat{
+color:alpha(#fff,0.7);}
+
+notebook header tabs tab button.flat:hover{
+color:alpha(#fff,1);}
+
+    notebook > header > tabs > tab button.flat:hover, notebook > header > tabs > tab button.sidebar-button box{
+background-color:transparent;}
+
     notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active {
       border: /*1px solid #b9b9b9*/ none;
       color: #fff;

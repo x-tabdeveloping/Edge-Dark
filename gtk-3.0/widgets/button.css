@@ -41,6 +41,16 @@ button.toggle:checked
 background-image: none;
 }
 
+button.flat.toggle.popup{
+border-radius:0px;}
+
+button.flat.toggle.popup box{
+background-color:transparent;}
+
+button.flat.toggle.popup:active{
+background-color:transparent;
+box-shadow:none;}
+
 button.radio:active.text-button{
 background-color: alpha(#fff,0.05);
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
@@ -61,6 +71,8 @@ border-radius:2px;
 box-shadow:none;
 }
 
+button.toggle box{
+background-color:transparent;}
 
 button image {
 background-color: transparent;
@@ -122,6 +134,12 @@ animation:none;}
 button.flat:not(.radio){
 background-color: alpha(#000,0.05);
 border-radius:100px;}
+
+button.flat(.text-button){
+border-radius: 0px;}
+
+button.popup{
+border-radius: 0px;}
 
 button.flat:hover:not(.radio){
 background-color: alpha(#000,0.08);

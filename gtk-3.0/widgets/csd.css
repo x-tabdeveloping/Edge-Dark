@@ -129,6 +129,9 @@ headerbar button.radio.text-button{
 padding: 10px 30px;
 border-radius:1px;}
 
+headerbar button box{
+background-color:transparent;}
+
 
 headerbar button.radio:active.text-button{
 background-color: alpha(#fff,0.05);
@@ -499,4 +502,8 @@ headerbar:last-child {
   border-top-right-radius: 15px; }
   .tiled headerbar:last-child, .maximized headerbar:last-child {
     border-radius: 0px; }
+
+toolbar{
+background-color:#000;
+padding:3px;}
 
