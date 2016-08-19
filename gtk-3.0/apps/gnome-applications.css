@@ -82,6 +82,9 @@ color:#000;}
 list.terminix-session-sidebar separator{
 color: transparent;}
 
+list.terminix-session-sidebar box widget{
+background-color:shade(@bg_color,0.8);}
+
 list.terminix-session-sidebar row {
 background-color:transparent;
 border-radius:0px;
@@ -118,6 +121,16 @@ background-color:#000;}
 vte-terminal{
 background-color:#002A35;
 color:#647B7F;}
+
+/*Calendar*/
+calendar-view.year-view stack box.vertical.sidebar{
+background-color:shade(@bg_color,0.8);}
+
+viewport widget.year-navigator{
+background-color:@bg;}
+
+window.csd.views headerbar box.horizontal.linked button{
+border-radius:100px;}
 
 
 

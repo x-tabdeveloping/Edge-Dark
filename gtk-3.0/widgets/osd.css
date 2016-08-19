@@ -308,9 +308,12 @@ GtkProgressBar.osd.progressbar {
 
 }
 
-scrolledwindow viewport.frame {
+/*scrolledwindow viewport.frame {
   border-style: none; }
+*/
 
+viewport {
+background-color:@bg;}
 /* used by Documents */
 .osd .page-thumbnail {
     border-style: solid;

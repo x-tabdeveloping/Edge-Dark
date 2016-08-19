@@ -258,6 +258,9 @@ font: Segoe UI;}
 label:disabled {
   color: #ababad; }
 
+label:backdrop{
+color:#fff;}
+
 label:selected {
 background-color:@selected_bg_color;
 }
@@ -273,12 +276,13 @@ GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
 
-scrolledwindow{
-background-color: @base_color;}
+scrolledwindow,
+scrolledwindow frame{
+background-color: @bg;}
 
 viewport.frame{
 border: none;
-background-color:@base_color;}
+background-color:@bg;}
 
 .content-view,
 .content-view viewport,
@@ -369,6 +373,28 @@ colorchooser .popover.osd {
     font-weight: 700; }
 
 
+stack stack frame,
+stack stack frame * :not(box):not(button):not(label):not(image):not(grid):not(stack):not(.horizontal):not(undershoot) {
+background-color: alpha(#000,0.3);}
+
+stack stack frame *:backdrop{
+color:#fff;}
+
+stack stack grid {
+background-color: transparent;}
+
+stack stack image:backdrop{
+color:#fff;}
+
+
+
+stack stack frame label,
+stack stack image{
+color:#fff;}
+
+viewport{
+background-color:@bg;}
+
 
 frame > border,
 .frame {
@@ -380,6 +406,15 @@ frame > border,
   frame > border.flat,
   .frame.flat {
     border-style: none; }
+
+stack frame.weather-showers,
+stack frame frame{
+background-color:transparent;}
+
+stack {
+background-color:transparent;}
+frame{
+background-color:transparent;}
 
 actionbar,
 actionbar revealer{
@@ -480,3 +515,6 @@ border-radius: 0px;}
 @import url("apps/gnome-applications.css");
 @import url("apps/unity.css");
 @import url("apps/gnome-software.css");
+
+toolbar button.flat.image-button box.horizontal{
+background-color:transparent;}

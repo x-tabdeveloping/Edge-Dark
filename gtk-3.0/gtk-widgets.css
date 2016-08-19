@@ -169,7 +169,7 @@ GtkHTML {
 /*********
  * frame *
  *********/
-.frame {
+/*.frame {
     border-color: shade(@theme_bg_color, 0.8);
 }
 
@@ -177,7 +177,7 @@ GtkHTML {
 .frame.flat {
 	border: none;
 }
-
+*/
 /*******************
  * scrolled window *
  ******************
@@ -588,25 +588,29 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
 /*******************
  * scrolled window *
  *******************/
-GtkScrolledWindow.frame {
+/*GtkScrolledWindow.frame {
     border-width: 0px;
     border-style: solid;
     border-color: #fff;
     border-radius: 0;
 }
-
+*/
 /* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
-GtkScrolledWindow GtkViewport.frame {
-    border-style: none;
-}
 
-scrolledwindow junction {
+/*scrolledwindow junction {
   border-style: solid none none solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF; }
   scrolledwindow junction:dir(rtl) {
     border-style: solid solid none none; }
+*/
 
+scrolledwindow,
+scrolledwindow viewport{
+background-color:@bg;}
+
+viewport{
+background-color:@bg;}
 
