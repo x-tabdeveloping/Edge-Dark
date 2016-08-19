@@ -133,5 +133,117 @@ window.csd.views headerbar box.horizontal.linked button{
 border-radius:100px;}
 
 
+/*Rhythmbox*/
+
+toolbar.primary-toolbar{
+background-color: shade(@bg_color,0.8);}
+
+button.raised{
+border-radius:6px;
+box-shadow: none;
+background-color: alpha(#000,0.2);
+margin-left:2px;
+margin-right:2px;
+color:alpha(#fff,0.6);}
+
+button.raised:hover{
+color:#fff;}
+
+button.raised box{
+background-color:transparent;}
+
+treeview.view{
+background-color: shade(@bg_color,1.3);
+border-radius: 0px;
+padding: 5px;
+}
+
+treeview.view:selected{
+background-color:alpha(@selected_bg_color,0.4); }
+
+treeview.sidebar{
+background-color:shade(@bg_color,0.6);
+border-radius: 0px;}
+
+treeview.sidebar:selected{
+box-shadow: inset 2px 0px @selected_bg_color;
+background-color:transparent; }
+
+treeview.view:selected{
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+treeview button{
+background-color: alpha(#000,0.2);
+border-radius:0px;
+padding:6px;
+box-shadow:none;
+margin: 4px}
+
+treeview button box{
+background-color: transparent;
+margin:3px;}
+
+treeview button image{
+margin: 3px;}
+
+treeview.view *{
+border-radius:0px;}
+
+toolbar.sidebar-toolbar{
+background-color:shade(@bg_color,0.6);}
+
+button.flat.toggle,
+button.flat.scale{
+border-radius:0px;}
+
+button.flat.scale{
+box-shadow:none;}
+
+button.flat.scale:checked{
+box-shadow:inset 0 -2px @selected_bg_color;}
+
+entry image{
+margin-right: 3px;}
 
 
+button.toggle.popup.raised{
+background-color:transparent;
+box-shadow:none;
+border-radius:0px;}
+
+button.toggle.popup.raised:checked{
+box-shadow: inset 0px -2px @selected_bg_color;}
+
+treeview.view:active{
+background-color:alpha(#fff,0.1);}
+
+treeview.view {
+  -GtkTreeView-grid-line-width: 1;
+  -GtkTreeView-grid-line-pattern: '';
+  -GtkTreeView-tree-line-width: 1;
+  -GtkTreeView-tree-line-pattern: '';
+  -GtkTreeView-expander-size: 16;
+}
+
+  treeview.view:hover, treeview.view:active, treeview.view:selected {
+    border-radius: 0; }
+  treeview:hover, treeview:active, treeview:selected {
+    border-radius: 0; }
+
+  treeview.view.separator {
+    min-height: 5px;
+    color: rgba(0, 0, 0, 0.1); }
+
+/*Lollypop*/
+
+row.trackrowplaying{
+background-color:transparent;
+border-radius: 0px;
+}
+
+image.small-cover-frame{
+border:none;}
+
+label.dim-label{
+margin-left: 5px;}

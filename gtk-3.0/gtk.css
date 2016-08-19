@@ -258,15 +258,15 @@ font: Segoe UI;}
 label:disabled {
   color: #ababad; }
 
-label:backdrop{
+/*label:backdrop{
 color:#fff;}
-
+*/
 label:selected {
 background-color:@selected_bg_color;
 }
 
 treeview{
-background-color: shade(@selected_bg_color, 0.2);}
+background-color: shade(@bg_color, 0.8);}
 
 
 frame.flat,
