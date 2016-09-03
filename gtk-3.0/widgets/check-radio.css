@@ -20,6 +20,14 @@ le
   to {
     -gtk-icon-transform: unset; } }
 
+@keyframes a{
+from{
+-gtk-icon-transform: unset;}
+50%{
+-gtk-icon-transform: scale(1.4);}
+to{
+-gtk-icon-transform: unset;}}
+
 check {
   -gtk-icon-source: -gtk-icontheme("emblem-ok-symbolic"); 
   icon-shadow: none;
@@ -145,12 +153,19 @@ background-color: shade(@selected_bg_color,0.8);
 }
 
 radio:active{
-  animation: check_check 0.4s cubic-bezier(0, 0, 0.2, 1);
+  /*animation: check_check 0.4s cubic-bezier(0, 0, 0.2, 1);*/
 background-color:@selected_bg_color;}
 
 radio:checked{
 color: #fff;
 background-color: #00BCD4;
-    animation: cica_effect 0.7s cubic-bezier(0, 0, 0.2, 1) forwards;
-    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
+    /*animation: cica_effect 0.7s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;*/
 }
+
+radio:checked{
+  animation: a 0.4s cubic-bezier(0, 0, 0.2, 1); }
+
+radio:active{
+    animation: cica_effect 0.7s cubic-bezier(0, 0, 0.2, 1) forwards;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;}

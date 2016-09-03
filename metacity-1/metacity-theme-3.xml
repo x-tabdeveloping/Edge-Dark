@@ -2,7 +2,7 @@
 <metacity_theme>
 <info>
 	<name>Edge Dark</name>
-	<author>kmarton</author>
+	<author>Márton Kardos</author>
 	<copyright>GPL</copyright>
 	<date>2016</date>
 	<description>Edge Dark metacity theme based on adapta</description>
@@ -18,7 +18,7 @@
 <constant name="C_icons_focused_pressed" value="gtk:custom(theme_inverted_fg_color,gtk:fg[NORMAL])" />
 <constant name="C_icons_unfocused_pressed" value="gtk:custom(theme_unfocused_inverted_fg_color,gtk:fg[NORMAL])" />
 <constant name="D_icons_unfocused_offset" value="0" /> <!-- offset of the unfocused icons -->
-<constant name="D_icons_shrink" value="1.4" /> <!-- increasing this value makes the icons in buttons smaller -->
+<constant name="D_icons_shrink" value="1.2" /> <!-- increasing this value makes the icons in buttons smaller -->
 <constant name="D_icons_grow" value="0" /> <!-- increasing this value makes the icons in buttons bigger -->
 
 <!-- geometries -->
@@ -29,7 +29,7 @@
 	<distance name="bottom_height" value="0" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="19"/>
+	<distance name="title_vertical_pad" value="15"/>
 	<border name="title_border" left="10" right="10" top="0" bottom="0"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 	<aspect_ratio name="button" value="1"/>
@@ -109,8 +109,8 @@
 
 <!-- normal state -->
 <draw_ops name="entire_background_focused">
-	<rectangle color="#1C222D" x="0" y="0" width="width" height="height" filled="true" />
-	<line color="#1C222D" x1="1" y1="0" x2="width-2" y2="0" />
+	<rectangle color="#1F232A" x="0" y="0" width="width" height="height" filled="true" />
+	<line color="#1F232A" x1="1" y1="0" x2="width-2" y2="0" />
 </draw_ops>
 
 <draw_ops name="entire_background_unfocused">
@@ -148,6 +148,7 @@
 <!-- maximized state -->
 <draw_ops name="max_entire_background_focused">
 	<rectangle color="#000000" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="#3872c8" x="0" y="0" width="width" height="2" filled="true" />
 </draw_ops>
 
 <draw_ops name="max_entire_background_unfocused">

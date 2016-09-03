@@ -365,6 +365,9 @@ headerbar button.titlebutton {
 box-shadow: inset 0 1px alpha(#fff,0.1);
 }
 
+  decoration:backdrop {
+    transition: 200ms ease-out; }
+
 .titlebar {
     background-image: none;
     background-color: shade(@bg_color, 0.9);

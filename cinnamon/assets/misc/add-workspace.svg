@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="35"
+   width="50"
    height="200"
    id="svg2"
    version="1.1"
@@ -19,34 +19,42 @@
      id="defs4" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#909090"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.99"
-     inkscape:cx="6.3562753"
-     inkscape:cy="102.09396"
+     inkscape:zoom="3.94"
+     inkscape:cx="-31.408507"
+     inkscape:cy="95.748782"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="960"
-     inkscape:window-height="1135"
-     inkscape:window-x="960"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="0"
      inkscape:window-y="31"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      showguides="false"
      inkscape:guide-bbox="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:bbox-nodes="true">
+     inkscape:bbox-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="false"
+     objecttolerance="1"
+     guidetolerance="1">
     <inkscape:grid
        type="xygrid"
        id="grid3040"
        empspacing="5"
        visible="true"
-       enabled="true"
+       enabled="false"
        snapvisiblegridlinesonly="true" />
     <sodipodi:guide
        orientation="0,1"
@@ -94,11 +102,28 @@
     <g
        transform="translate(0,-0.9999969)"
        id="g3917-7"
-       style="fill:#eceff1;fill-opacity:1;opacity:0.5;stroke:none;stroke-opacity:1" />
-    <path
-       inkscape:connector-curvature="0"
-       d="m 19.303258,934.89683 -3.915887,-0.0346 0.13734,15.52469 L 0,950.2495 l 0.0346325,3.91587 15.5247005,0.13737 0.13741,15.52478 3.915879,0.0346 -0.13741,-15.52473 L 35,954.47482 34.96537,950.55895 19.440582,950.42157 19.30326,934.8969 Z"
-       id="path4"
-       style="fill:#dadad8;fill-opacity:0.77403843" />
+       style="opacity:0.5;fill:#eceff1;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.48399999;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3364"
+       width="50.253807"
+       height="200"
+       x="-0.12690353"
+       y="852.36218" />
+    <g
+       id="g3360"
+       transform="matrix(1.4060915,0,0,1.4060915,-0.16163773,-386.74619)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4150"
+         d="m 27.894734,952.36218 -19.9999938,0"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.51999927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.51999927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 17.894737,962.36218 0,-19.99999"
+         id="path4152"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>

@@ -68,7 +68,8 @@
   -GtkWidget-text-handle-width: 24;
   -GtkWidget-text-handle-height: 24;
   -GtkDialog-button-spacing: 4;
-  -GtkDialog-action-area-border: 0;}
+  -GtkDialog-action-area-border: 0;
+}
 
 
 spinner {
@@ -239,7 +240,7 @@ textview text {
   iconview text:selected:focus,
   textview text:selected:focus {
     text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
-    border-radius: 2px; }
+    border-radius: 0px; }
 
 icon,
 label {
@@ -257,6 +258,27 @@ font: Segoe UI;}
 
 label:disabled {
   color: #ababad; }
+
+treeview check{
+border-radius: 0px;
+background-color: #000;}
+
+treeview check:checked,
+treeview check:backdrop:checked,
+treeview check:checked:prelight,
+treeview chekc:checked:selected{
+background-color: @selected_bg_color;}
+
+treeview check,
+treeview check:hover,
+treeview check:prelight:not(:checked),
+treeview check:selected:not(:checked),
+treeview check:backdrop:not(:checked),
+treeview check:backdrop:prelight,
+treeview check:insensitive{
+border-radius: 0px;
+background-color: #000;}
+
 
 /*label:backdrop{
 color:#fff;}
@@ -374,7 +396,7 @@ colorchooser .popover.osd {
 
 
 stack stack frame,
-stack stack frame * :not(box):not(button):not(label):not(image):not(grid):not(stack):not(.horizontal):not(undershoot) {
+stack stack frame * :not(box):not(button):not(label):not(image):not(grid):not(stack):not(.horizontal):not(undershoot):not(list):not(row):not(switch):not(slider):not(combobox):not(menu):not(menuitem):not(.combo) {
 background-color: alpha(#000,0.3);}
 
 stack stack frame *:backdrop{

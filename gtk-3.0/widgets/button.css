@@ -60,6 +60,10 @@ background-color: alpha(#fff,0.05);
 button.radio:checked:not(.image-button){
         box-shadow: inset 0 -2px #009688;}
 
+modelbutton box,
+popover modelbuton box{
+background-color:transparent;}
+
 button.radio.text-button:checked{
 background-color: transparent;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;

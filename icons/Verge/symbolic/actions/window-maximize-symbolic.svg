@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1135"
+     inkscape:window-height="1137"
      id="namedview12"
      showgrid="false"
      inkscape:zoom="25.679692"
-     inkscape:cx="-8.9384753"
-     inkscape:cy="8"
+     inkscape:cx="5.7229155"
+     inkscape:cy="7.9221174"
      inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:window-y="28"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer12" />
   <metadata
@@ -61,7 +61,8 @@
      inkscape:label="actions"
      transform="translate(-541.0002,-9)">
     <g
-       id="g4137">
+       id="g4137"
+       transform="translate(-0.04124664,0.05428526)">
       <rect
          ry="0.69999999"
          y="9.7481375"

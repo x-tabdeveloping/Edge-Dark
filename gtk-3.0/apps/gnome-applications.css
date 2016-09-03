@@ -1,5 +1,5 @@
 /*Nautilus*/
-.nautilus-window *:not(.titlebar):not(headerbar):not(popover):not(scale):not(button):not(modelbutton):not(check):not(radio):not(slider):not(scale):not(.horizontal):not(.menu):not(sidebar):not(placesidebar):not(list):not(row):not(selection):not(.selected):not(menu):not(.menu):not(.csd):not(:hover):not(:active):not(decoration):not(progressbar){
+.nautilus-window *:not(.titlebar):not(headerbar):not(popover):not(scale):not(button):not(modelbutton):not(check):not(radio):not(slider):not(scale):not(.horizontal):not(.menu):not(sidebar):not(placesidebar):not(list):not(row):not(selection):not(.selected):not(menu):not(.menu):not(.csd):not(:hover):not(:active):not(decoration):not(progressbar):not(:selected):not(:prelight){
 background-color:transparent;}
 
 .nautilus-window decoration{
@@ -50,6 +50,55 @@ background-color:@selected_bg_color;}
   text-shadow: none; }
 
 /*Terminix*/
+
+button.terminix-sidebar-close-button{
+background-color: #000;
+color: alpha(#fff,0.6);
+padding: 3px;
+transition: 0.2s;}
+
+button.terminix-sidebar-close-button:hover{
+background-color: #000;
+color: alpha(#fff,0.9);
+transition: 0.2s;}
+
+button.terminix-sidebar-close-button:active{
+background-color: @selected_bg_color;
+color: #fff;
+padding: 3px;
+transition: 0.5s;}
+
+box.vertical.terminix-background{
+background-color: #2F5494;
+transition:2s;}
+
+scrollbar.terminix-terminal-scrollbar{
+background-color: #000;
+padding:2px;}
+
+scrollbar.terminix-terminal-scrollbar slider{
+padding:5px;
+background-color:alpha(#fff,0.5);
+border-radius:0px;}
+
+box.vertical.terminix-background:backdrop{
+background-color: shade(#2F5494,0.9);
+transition:0.5s;}
+
+box.terminix-background{
+background-color: shade(#2F5494,0.9);
+transition:0.5s;}
+
+stack.terminix-background box.vertical.terminix-background{
+background-color:#000;}
+
+overlay revealer scrolledwindow viewport list.header.notebook.terminix-session-sidebar{
+background-color: shade(@bg_color,0.7);}
+
+list.header.notebook.terminix-session-sidebar row label{
+background-color:transparent;
+color:#888888;}
+
 
 button.popup{
 border-radius: 0px;}
@@ -158,12 +207,19 @@ border-radius: 0px;
 padding: 5px;
 }
 
-treeview.view:selected{
+treeview.view:selected,
+treeview.view:selected:focus{
 background-color:alpha(@selected_bg_color,0.4); }
 
 treeview.sidebar{
 background-color:shade(@bg_color,0.6);
 border-radius: 0px;}
+
+*.view:selected:focus,
+treeview:selected:focus{
+background-color:#000;
+alpha(@selected_bg_color,0.4);
+border-radius:0px;}
 
 treeview.sidebar:selected{
 box-shadow: inset 2px 0px @selected_bg_color;
@@ -172,6 +228,10 @@ background-color:transparent; }
 treeview.view:selected{
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), color 0, background-image 0;
     animation: cica_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+*.view:selected{
+background-color:alpha(@selected_bg_color,0.4);;
+border-radius:0px;}
 
 treeview button{
 background-color: alpha(#000,0.2);

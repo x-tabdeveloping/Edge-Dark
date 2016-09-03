@@ -96,6 +96,19 @@
          operator="over"
          result="composite2" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4220"
+       x="-0.025220797"
+       width="1.0504416"
+       y="-0.025181922"
+       height="1.0503638">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.32263316"
+         id="feGaussianBlur4222" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -105,8 +118,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="8.6599296"
-     inkscape:cx="-29.671535"
-     inkscape:cy="22.535331"
+     inkscape:cx="-49.359917"
+     inkscape:cy="17.916356"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -116,10 +129,14 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1135"
+     inkscape:window-height="1137"
      inkscape:window-x="0"
      inkscape:window-y="31"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:snap-nodes="false"
+     objecttolerance="1"
+     gridtolerance="1"
+     guidetolerance="1">
     <inkscape:grid
        type="xygrid"
        id="grid5954" />
@@ -132,7 +149,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
       </cc:Work>
@@ -171,11 +188,19 @@
        clip-path="url(#clipPath4230)"
        inkscape:label="#rect4366" />
     <rect
-       style="opacity:0.46700003;fill:#14588b;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       y="1022.2483"
+       x="1.967518"
+       height="30.749025"
+       width="30.70163"
+       id="rect4150"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4220)"
+       transform="matrix(1.0252204,0,0,1.0026489,-1.6492558,-3.6146303)" />
+    <rect
+       style="opacity:1;fill:#3f637e;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4919"
-       width="32.318272"
-       height="32.596615"
-       x="0.021078428"
-       y="1020.3018" />
+       width="30.70163"
+       height="30.749025"
+       x="0.71392471"
+       y="1020.9947" />
   </g>
 </svg>
