@@ -171,6 +171,42 @@ vte-terminal{
 background-color:#002A35;
 color:#647B7F;}
 
+TerminalScreen,
+VteTerminal {
+  background-color: #002A35;
+  color: #647B7F; }
+
+TerminalWindow .titlebar,
+TerminalWindow headerbar {
+  background-color: #002A35; }
+  TerminalWindow .titlebar:backdrop,
+  TerminalWindow headerbar:backdrop {
+    background-color: #002A35; }
+
+stack.terminix-background box.horizontal{
+background-color:shade(@bg_color,0.8);}
+
+vte-terminal{
+background-color:#002A35;
+color:#647B7F;}
+
+revealer list.notebook.header{
+background-color:shade(@base_color,0.7);}
+vte-terminal label{
+color:#647B7F;}
+
+TerminalScreen,
+VteTerminal {
+  background-color: #002A35;
+  color: #647B7F; }
+
+TerminalWindow .titlebar,
+TerminalWindow headerbar {
+  background-color: #002A35; }
+  TerminalWindow .titlebar:backdrop,
+  TerminalWindow headerbar:backdrop {
+    background-color: #002A35; }
+
 /*Calendar*/
 calendar-view.year-view stack box.vertical.sidebar{
 background-color:shade(@bg_color,0.8);}

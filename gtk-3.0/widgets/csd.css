@@ -35,10 +35,15 @@ headerbar {
 .tiled .titlebar:not(headerbar),
 .tiled headerbar,
 .maximized .titlebar:not(headerbar),
-.maximized headerbar {
+.maximized headerbar{
 border-radius: 0px;
 border-top: 1px solid @selected_bg_color;
 background-color: #000; }
+
+.tiled decoration,
+.maximized decoration {
+border-radius: 0px;
+background-color: #000;}
 
 /*.csd .header-bar,
 .csd .titlebar,
